@@ -32,18 +32,12 @@
 body{background:var(--bg);color:var(--tx);font-family:var(--fn);min-height:100vh;overflow-x:hidden}
 button,select,input{font-family:var(--fn)}
 a{color:inherit;text-decoration:none}
-
-/* Layout */
 .container{max-width:780px;margin:0 auto;padding:28px 20px 60px}
 .narrow{max-width:560px;margin:0 auto}
 .wide{max-width:1000px;margin:0 auto;padding:28px 20px 60px}
-
-/* Cards */
 .card{background:var(--cd);border-radius:14px;padding:22px 24px;border:1px solid var(--bd);box-shadow:0 1px 4px rgba(0,0,0,.04)}
 .card-hover{cursor:pointer;transition:all .2s}
 .card-hover:hover{border-color:var(--p);transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
-
-/* Buttons */
 .btn{padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s;border:1.5px solid var(--bd);background:var(--cd);color:var(--tx);display:inline-flex;align-items:center;gap:6px}
 .btn:hover{border-color:var(--p);color:var(--p)}
 .btn.primary{border-color:var(--p);background:var(--p);color:#fff}
@@ -54,8 +48,6 @@ a{color:inherit;text-decoration:none}
 .btn.sm{padding:6px 14px;font-size:13px}
 .btn.lg{padding:13px 28px;font-size:16px;border-radius:10px}
 .btn:disabled{opacity:.45;cursor:not-allowed}
-
-/* Nav */
 #nav{position:sticky;top:0;z-index:100;background:rgba(245,243,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);padding:0 20px}
 .nav-inner{max-width:780px;margin:0 auto;display:flex;align-items:center;gap:4px;height:52px;overflow-x:auto;scrollbar-width:none}
 .nav-inner::-webkit-scrollbar{display:none}
@@ -63,12 +55,8 @@ a{color:inherit;text-decoration:none}
 .nav-tab:hover{color:var(--tx);background:var(--bd)}
 .nav-tab.active{color:var(--p);background:var(--pl);font-weight:600}
 .nav-logo{font-size:15px;font-weight:800;color:var(--p);margin-right:8px;white-space:nowrap;letter-spacing:-.3px}
-
-/* Progress bar */
 .progress-bar{height:3px;background:var(--bd);border-radius:2px;overflow:hidden;margin-bottom:20px}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--p),var(--ac));border-radius:2px;transition:width .4s}
-
-/* Option buttons */
 .option-btn{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:9px;border:1.5px solid var(--bd);background:var(--cd);cursor:pointer;text-align:left;font-size:15px;color:var(--tx);transition:all .15s;line-height:1.5;width:100%}
 .option-btn:hover:not(.locked){border-color:var(--p);background:var(--pl)}
 .option-btn.selected{background:var(--pl);border-color:var(--p)}
@@ -79,75 +67,50 @@ a{color:inherit;text-decoration:none}
 .option-circle.sel{background:var(--p);color:#fff;border-color:var(--p)}
 .option-circle.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
 .option-circle.ng{background:var(--ng);color:#fff;border-color:var(--ng)}
-
-/* Tag badges */
 .badge{font-size:11px;font-weight:700;color:#fff;background:var(--p);padding:2px 8px;border-radius:4px;display:inline-block;letter-spacing:.3px}
 .badge.ac{background:var(--ac)}
 .badge.ok{background:var(--ok)}
 .badge.ng{background:var(--ng)}
 .badge.gray{background:var(--tm)}
-
-/* Word popup */
 .word-popup{position:fixed;z-index:9999;background:#fff;border:1px solid var(--bd);border-radius:10px;padding:14px 18px;max-width:280px;box-shadow:0 8px 32px rgba(0,0,0,.12);color:var(--tx);animation:fadeIn .2s ease-out;pointer-events:none}
 .word-popup .word-head{font-size:16px;font-weight:700;color:var(--p);margin-bottom:4px}
 .word-popup .word-pos{font-size:11px;color:var(--tm);font-style:italic;margin-bottom:6px}
 .word-popup .word-def{font-size:13px;line-height:1.6;margin-bottom:6px}
 .word-popup .word-ex{font-size:12px;color:var(--tm);line-height:1.5;padding:6px 10px;background:var(--pl);border-radius:6px;border-left:2px solid var(--p)}
-
-/* Clickable words */
 .cw{cursor:pointer;border-bottom:1px dotted rgba(42,124,118,.35);transition:color .1s}
 .cw:hover{color:var(--p)}
-
-/* Explanation block */
 .explanation{margin-top:16px;padding:16px;border-radius:10px}
 .explanation.ok{background:var(--okl);border:1px solid rgba(46,139,87,.2)}
 .explanation.ng{background:var(--acl);border:1px solid rgba(196,135,59,.25)}
 .trans-block{margin-top:8px;padding:10px 14px;background:var(--pl);border-radius:8px;font-size:13px;line-height:1.8;color:#555;white-space:pre-wrap;border-left:3px solid var(--p)}
-
-/* Stats bars */
 .stat-bar{height:6px;background:var(--bd);border-radius:3px;overflow:hidden}
 .stat-fill{height:100%;border-radius:3px;transition:width .6s}
-
-/* Grids */
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
 .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
-
-/* Modal */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .2s}
 .modal{background:var(--cd);border-radius:16px;padding:28px;max-width:500px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.2)}
 .modal-title{font-size:18px;font-weight:700;margin-bottom:16px;color:var(--p)}
-
-/* Import/Export UI */
 .drop-zone{border:2px dashed var(--bd);border-radius:12px;padding:40px;text-align:center;cursor:pointer;transition:all .2s;background:var(--bg)}
 .drop-zone:hover,.drop-zone.drag-over{border-color:var(--p);background:var(--pl)}
-
-/* Part 6/7 split layout */
 .split-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
 .split-left{position:sticky;top:72px;max-height:calc(100vh - 90px);overflow-y:auto;padding-right:4px}
 .passage-text{font-size:15px;line-height:1.85;color:#333}
-
-/* Vocab quiz */
 .vocab-card{perspective:600px}
 .vocab-inner{position:relative;width:100%;transform-style:preserve-3d;transition:transform .5s}
 .vocab-inner.flipped{transform:rotateY(180deg)}
 .vocab-front,.vocab-back{backface-visibility:hidden;border-radius:12px;padding:32px;text-align:center}
 .vocab-front{background:var(--cd);border:1px solid var(--bd)}
 .vocab-back{background:var(--pl);border:1px solid rgba(42,124,118,.25);position:absolute;inset:0;transform:rotateY(180deg)}
-
-/* Timer */
 .timer{font-size:13px;font-weight:600;color:var(--tm);padding:4px 12px;border-radius:6px;background:var(--bg);border:1px solid var(--bd)}
 .timer.warn{color:var(--ac);border-color:var(--ac);background:var(--acl)}
 .timer.danger{color:var(--ng);border-color:var(--ng);background:var(--ngl)}
-
-/* Animations */
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 @keyframes slideIn{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:translateX(0)}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes spin{to{transform:rotate(360deg)}}
 .fade-in{animation:fadeIn .25s ease-out}
 .slide-in{animation:slideIn .25s ease-out}
-
-/* Misc */
+.spinner{width:18px;height:18px;border:2px solid var(--bd);border-top-color:var(--p);border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
 .divider{height:1px;background:var(--bd);margin:20px 0}
 .empty-state{text-align:center;padding:60px 20px;color:var(--tm)}
 .empty-icon{font-size:48px;margin-bottom:16px}
@@ -155,17 +118,19 @@ a{color:inherit;text-decoration:none}
 .chip{padding:5px 12px;border-radius:20px;border:1.5px solid var(--bd);font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;background:var(--cd);color:var(--tm)}
 .chip:hover{border-color:var(--p);color:var(--p)}
 .chip.active{border-color:var(--p);background:var(--p);color:#fff}
-input[type=number],select{padding:8px 12px;border-radius:8px;border:1.5px solid var(--bd);background:var(--cd);color:var(--tx);font-size:14px;outline:none;transition:border-color .15s;width:100%}
-input[type=number]:focus,select:focus{border-color:var(--p)}
+input[type=number],input[type=text],input[type=password],select{padding:8px 12px;border-radius:8px;border:1.5px solid var(--bd);background:var(--cd);color:var(--tx);font-size:14px;outline:none;transition:border-color .15s;width:100%}
+input[type=number]:focus,input[type=text]:focus,input[type=password]:focus,select:focus{border-color:var(--p)}
 textarea{padding:12px;border-radius:8px;border:1.5px solid var(--bd);background:var(--cd);color:var(--tx);font-size:14px;outline:none;resize:vertical;width:100%;transition:border-color .15s}
 textarea:focus{border-color:var(--p)}
 label{font-size:13px;font-weight:600;color:var(--tm);margin-bottom:4px;display:block}
 .form-row{margin-bottom:14px}
-
-/* Toast */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;z-index:9998;animation:fadeIn .25s;pointer-events:none}
-
-/* Responsive */
+/* Batch progress */
+.batch-progress{background:var(--pl);border:1px solid rgba(42,124,118,.2);border-radius:10px;padding:16px;margin-top:12px}
+.batch-bar{height:8px;background:var(--bd);border-radius:4px;overflow:hidden;margin:8px 0}
+.batch-fill{height:100%;background:linear-gradient(90deg,var(--p),var(--ac));border-radius:4px;transition:width .3s}
+/* AI Generate */
+.generate-card{background:linear-gradient(135deg,var(--pl),#fdf8f0);border:1px solid rgba(42,124,118,.2);border-radius:14px;padding:22px 24px}
 @media(max-width:640px){
   .container{padding:16px 14px 56px}
   .wide{padding:16px 14px 56px}
@@ -175,14 +140,11 @@ label{font-size:13px;font-weight:600;color:var(--tm);margin-bottom:4px;display:b
   h1{font-size:26px!important}
   .grid3{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
 }
-@media(max-width:400px){
-  .grid4{grid-template-columns:repeat(2,1fr)}
-}
+@media(max-width:400px){.grid4{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 
-<!-- Nav -->
 <nav id="nav">
   <div class="nav-inner">
     <span class="nav-logo">📚 TOEIC OG</span>
@@ -192,22 +154,18 @@ label{font-size:13px;font-weight:600;color:var(--tm);margin-bottom:4px;display:b
     <button class="nav-tab" onclick="showPage('mistakes')" id="tab-mistakes">錯題</button>
     <button class="nav-tab" onclick="showPage('vocab')" id="tab-vocab">單字</button>
     <button class="nav-tab" onclick="showPage('stats')" id="tab-stats">統計</button>
+    <button class="nav-tab" onclick="showPage('aigen')" id="tab-aigen">AI出題</button>
     <button class="nav-tab" onclick="showPage('import')" id="tab-import">匯入</button>
+    <button class="nav-tab" onclick="showPage('settings')" id="tab-settings">⚙️</button>
   </div>
 </nav>
 
-<!-- Word popup -->
 <div id="wordPopup" class="word-popup" style="display:none"></div>
-
-<!-- Toast -->
 <div id="toast" class="toast" style="display:none"></div>
-
-<!-- Modal container -->
 <div id="modalOverlay" class="modal-overlay" style="display:none" onclick="closeModal(event)">
   <div class="modal" id="modalContent"></div>
 </div>
 
-<!-- Pages -->
 <div id="page-home"></div>
 <div id="page-browse" style="display:none"></div>
 <div id="page-practice" style="display:none"></div>
@@ -215,7 +173,9 @@ label{font-size:13px;font-weight:600;color:var(--tm);margin-bottom:4px;display:b
 <div id="page-mistakes" style="display:none"></div>
 <div id="page-vocab" style="display:none"></div>
 <div id="page-stats" style="display:none"></div>
+<div id="page-aigen" style="display:none"></div>
 <div id="page-import" style="display:none"></div>
+<div id="page-settings" style="display:none"></div>
 
 <script>
 // ============================================================
@@ -230,11 +190,11 @@ function loadDB() {
     if (raw) return JSON.parse(raw);
   } catch(e){}
   return {
-    questions: [],     // Array of question objects
-    mistakes: {},      // { qid: { count, lastWrong, history[] } }
-    history: [],       // [ { date, part, total, correct, qids[] } ]
-    vocabSeen: {},     // { word: { def, pos, ex, seenCount, lastSeen } }
-    settings: { timerDefault: true }
+    questions: [],
+    mistakes: {},
+    history: [],
+    vocabSeen: {},
+    settings: { timerDefault: true, geminiKey: '' }
   };
 }
 
@@ -244,44 +204,59 @@ function saveDB() {
   }
 }
 
+// Migrate old DB that might not have settings.geminiKey
+if (!DB.settings) DB.settings = { timerDefault: true, geminiKey: '' };
+if (!DB.settings.geminiKey) DB.settings.geminiKey = '';
+
 // ============================================================
-// QUESTION SCHEMA
-// {
-//   id: "og1_p5_001",          // unique id
-//   book: 1,                   // OG book number (1-19)
-//   part: 5,                   // 5, 6, or 7
-//   qNum: 101,                 // question number in test
-//   groupId: null,             // for P6/P7: shared passage group id
-//   passage: null,             // P6/P7: article text (only on first q of group)
-//   passageTitle: null,        // optional passage title
-//   stem: "...",               // question stem text
-//   options: ["A)...","B)...","C)...","D)..."],
-//   answer: "A",               // correct answer letter
-//   explanation: "...",        // Chinese explanation
-//   translation: "...",        // Chinese translation of stem/passage excerpt
-//   tags: ["文法","時態"],      // optional tags
-//   baby: false,               // baby-friendly flag
-//   addedAt: "2025-01-01"
-// }
+// GEMINI API
 // ============================================================
-
-// Helpers
-function genId() { return 'q_' + Date.now() + '_' + Math.random().toString(36).slice(2,6); }
-
-function getQuestion(id) { return DB.questions.find(q => q.id === id); }
-
-function getGroups(part) {
-  // Returns passages with their questions for P6/P7
-  const questions = DB.questions.filter(q => q.part === part);
-  const groups = {};
-  questions.forEach(q => {
-    const key = q.groupId || q.id;
-    if (!groups[key]) groups[key] = { groupId: key, passage: q.passage, passageTitle: q.passageTitle, book: q.book, questions: [] };
-    groups[key].questions.push(q);
-  });
-  return Object.values(groups).sort((a,b) => a.questions[0].qNum - b.questions[0].qNum);
+function getGeminiKey() {
+  return DB.settings.geminiKey || '';
 }
 
+async function callGemini(prompt, jsonMode = false) {
+  const key = getGeminiKey();
+  if (!key) throw new Error('請先在設定頁面輸入 Gemini API Key');
+
+  const model = 'gemini-2.0-flash';
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
+
+  const body = {
+    contents: [{ parts: [{ text: prompt }] }],
+    generationConfig: {
+      temperature: 0.3,
+      maxOutputTokens: jsonMode ? 1024 : 512
+    }
+  };
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.error?.message || `API 錯誤 ${res.status}`);
+  }
+
+  const data = await res.json();
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+  return text;
+}
+
+async function callGeminiJSON(prompt) {
+  const text = await callGemini(prompt, true);
+  const clean = text.replace(/```json|```/g, '').trim();
+  return JSON.parse(clean);
+}
+
+// ============================================================
+// HELPERS
+// ============================================================
+function genId() { return 'q_' + Date.now() + '_' + Math.random().toString(36).slice(2,6); }
+function getQuestion(id) { return DB.questions.find(q => q.id === id); }
 function recordMistake(qid) {
   if (!DB.mistakes[qid]) DB.mistakes[qid] = { count: 0, lastWrong: null, history: [] };
   DB.mistakes[qid].count++;
@@ -289,12 +264,7 @@ function recordMistake(qid) {
   DB.mistakes[qid].history.push(new Date().toISOString());
   saveDB();
 }
-
-function removeMistake(qid) {
-  delete DB.mistakes[qid];
-  saveDB();
-}
-
+function removeMistake(qid) { delete DB.mistakes[qid]; saveDB(); }
 function addVocab(word, def, pos, ex) {
   if (!DB.vocabSeen[word]) DB.vocabSeen[word] = { def:'', pos:'', ex:'', seenCount:0, lastSeen:null };
   if (def) DB.vocabSeen[word].def = def;
@@ -304,12 +274,19 @@ function addVocab(word, def, pos, ex) {
   DB.vocabSeen[word].lastSeen = new Date().toISOString();
   saveDB();
 }
+function shuffle(arr) {
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
 // ============================================================
 // PAGE ROUTING
 // ============================================================
 let currentPage = 'home';
-
 function showPage(page) {
   document.querySelectorAll('[id^="page-"]').forEach(el => el.style.display = 'none');
   document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
@@ -318,8 +295,7 @@ function showPage(page) {
   const tab = document.getElementById('tab-' + page);
   if (tab) tab.classList.add('active');
   currentPage = page;
-  window.scrollTo(0, 0);
-
+  window.scrollTo(0,0);
   switch(page) {
     case 'home': renderHome(); break;
     case 'browse': renderBrowse(); break;
@@ -327,7 +303,120 @@ function showPage(page) {
     case 'mistakes': renderMistakes(); break;
     case 'vocab': renderVocab(); break;
     case 'stats': renderStats(); break;
+    case 'aigen': renderAIGen(); break;
     case 'import': renderImport(); break;
+    case 'settings': renderSettings(); break;
+  }
+}
+
+// ============================================================
+// SETTINGS PAGE
+// ============================================================
+function renderSettings() {
+  const el = document.getElementById('page-settings');
+  const hasKey = !!getGeminiKey();
+  el.innerHTML = `
+  <div class="container narrow">
+    <h1 style="font-size:22px;font-weight:800;margin-bottom:20px">⚙️ 設定</h1>
+
+    <!-- Gemini API Key -->
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-weight:700;font-size:16px;margin-bottom:4px;display:flex;align-items:center;gap:8px">
+        🔑 Gemini API Key
+        <span class="badge ${hasKey?'ok':'gray'}">${hasKey?'已設定':'未設定'}</span>
+      </div>
+      <div style="font-size:13px;color:var(--tm);margin-bottom:14px">
+        前往 <a href="https://aistudio.google.com/apikey" target="_blank" style="color:var(--p);text-decoration:underline">aistudio.google.com/apikey</a> 免費申請
+      </div>
+      <div class="form-row">
+        <label>貼上你的 API Key</label>
+        <div style="display:flex;gap:8px">
+          <input type="password" id="geminiKeyInput" placeholder="AIzaSy..." value="${escapeHtml(getGeminiKey())}" style="flex:1">
+          <button class="btn" onclick="toggleKeyVisibility()">👁</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn primary" onclick="saveGeminiKey()">儲存 Key</button>
+        <button class="btn" onclick="testGeminiKey()">測試連線</button>
+        ${hasKey ? `<button class="btn danger sm" onclick="clearGeminiKey()">清除 Key</button>` : ''}
+      </div>
+      <div id="keyTestResult" style="margin-top:10px;font-size:13px"></div>
+    </div>
+
+    <!-- Key 說明 -->
+    <div class="card" style="margin-bottom:16px;background:var(--pl);border-color:rgba(42,124,118,.2)">
+      <div style="font-weight:700;margin-bottom:8px;color:var(--p)">🔒 安全說明</div>
+      <div style="font-size:13px;color:#555;line-height:1.8">
+        • Key 只儲存在你的裝置（localStorage），不會上傳到任何伺服器<br>
+        • 每次開啟 App 自動讀取，不需要重新輸入<br>
+        • Gemini API 免費額度每天大量請求，正常使用不會產生費用<br>
+        • 若換電腦使用，需要重新輸入 Key
+      </div>
+    </div>
+
+    <!-- Timer setting -->
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-weight:700;margin-bottom:12px">⏱ 預設計時模式</div>
+      <div class="chip-group">
+        <div class="chip ${DB.settings.timerDefault?'active':''}" onclick="DB.settings.timerDefault=true;saveDB();renderSettings()">計時</div>
+        <div class="chip ${!DB.settings.timerDefault?'active':''}" onclick="DB.settings.timerDefault=false;saveDB();renderSettings()">不計時</div>
+      </div>
+    </div>
+
+    <!-- Storage info -->
+    <div class="card">
+      <div style="font-weight:700;margin-bottom:12px">💾 儲存空間</div>
+      <div style="font-size:13px;color:var(--tm)">
+        題目：${DB.questions.length} 道 ·
+        錯題：${Object.keys(DB.mistakes).length} 道 ·
+        單字：${Object.keys(DB.vocabSeen).length} 個
+      </div>
+    </div>
+  </div>`;
+}
+
+function toggleKeyVisibility() {
+  const input = document.getElementById('geminiKeyInput');
+  input.type = input.type === 'password' ? 'text' : 'password';
+}
+
+function saveGeminiKey() {
+  const key = document.getElementById('geminiKeyInput').value.trim();
+  if (!key) { showToast('請輸入 API Key'); return; }
+  if (!key.startsWith('AIza')) { showToast('⚠️ Key 格式不正確，應以 AIza 開頭'); return; }
+  DB.settings.geminiKey = key;
+  saveDB();
+  showToast('✅ API Key 已儲存');
+  renderSettings();
+}
+
+function clearGeminiKey() {
+  DB.settings.geminiKey = '';
+  saveDB();
+  renderSettings();
+  showToast('Key 已清除');
+}
+
+async function testGeminiKey() {
+  const key = document.getElementById('geminiKeyInput').value.trim();
+  if (!key) { showToast('請先輸入 Key'); return; }
+  // Temporarily save for test
+  const oldKey = DB.settings.geminiKey;
+  DB.settings.geminiKey = key;
+
+  const resultEl = document.getElementById('keyTestResult');
+  resultEl.innerHTML = '<span class="spinner"></span> 測試中...';
+
+  try {
+    const result = await callGemini('Say "OK" only.');
+    if (result) {
+      resultEl.innerHTML = '<span style="color:var(--ok)">✅ 連線成功！Key 有效</span>';
+      DB.settings.geminiKey = key;
+      saveDB();
+    }
+  } catch(e) {
+    resultEl.innerHTML = `<span style="color:var(--ng)">❌ 連線失敗：${e.message}</span>`;
+    DB.settings.geminiKey = oldKey;
   }
 }
 
@@ -342,11 +431,8 @@ function renderHome() {
   const vocabCount = Object.keys(DB.vocabSeen).length;
   const recentHistory = DB.history.slice(-7);
   const avgAcc = recentHistory.length ? Math.round(recentHistory.reduce((s,h) => s + h.correct/h.total, 0) / recentHistory.length * 100) : null;
-
-  const partCounts = [5,6,7].map(p => ({
-    part: p,
-    count: DB.questions.filter(q => q.part === p).length
-  }));
+  const hasKey = !!getGeminiKey();
+  const withExplanation = DB.questions.filter(q => q.explanation).length;
 
   el.innerHTML = `
   <div class="container">
@@ -355,13 +441,37 @@ function renderHome() {
       <p style="color:var(--tm);margin-top:4px;font-size:14px">Official Guide 閱讀題庫練習平台</p>
     </div>
 
-    <!-- Stats row -->
+    ${!hasKey ? `
+    <div class="card" style="margin-bottom:20px;background:var(--acl);border-color:rgba(196,135,59,.3);cursor:pointer" onclick="showPage('settings')">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:24px">🔑</span>
+        <div>
+          <div style="font-weight:700;color:var(--ac)">尚未設定 Gemini API Key</div>
+          <div style="font-size:13px;color:var(--tm)">點此前往設定 → 解鎖 AI 詳解、單字查詢、AI 出題</div>
+        </div>
+      </div>
+    </div>` : ''}
+
     <div class="grid4" style="margin-bottom:20px">
       ${statCard('📖','題目數',total,'道')}
       ${statCard('📚','已載入',books,'回')}
       ${statCard('❌','錯題',mistakeCount,'道')}
       ${statCard('📝','單字',vocabCount,'個')}
     </div>
+
+    ${total > 0 && withExplanation < total ? `
+    <div class="card" style="margin-bottom:20px;background:linear-gradient(135deg,var(--pl),#fdf8f0);border-color:rgba(42,124,118,.2);cursor:pointer" onclick="showPage('import')">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:24px">✨</span>
+          <div>
+            <div style="font-weight:700;color:var(--p)">已有詳解：${withExplanation} / ${total} 題</div>
+            <div style="font-size:13px;color:var(--tm)">前往匯入頁面一鍵批次生成全部詳解</div>
+          </div>
+        </div>
+        <button class="btn primary sm" onclick="event.stopPropagation();showPage('import')">批次生成 →</button>
+      </div>
+    </div>` : ''}
 
     ${avgAcc !== null ? `
     <div class="card" style="margin-bottom:20px;background:linear-gradient(135deg,#f0f7f6,#faf8f5);border-color:rgba(42,124,118,.2)">
@@ -377,26 +487,24 @@ function renderHome() {
       </div>
     </div>` : ''}
 
-    <!-- Part quick access -->
     <h2 style="font-size:16px;font-weight:700;margin-bottom:12px">按 Part 練習</h2>
     <div class="grid3" style="margin-bottom:24px">
       ${[5,6,7].map(p => {
-        const c = partCounts.find(x => x.part === p);
-        const disabled = c.count === 0;
+        const count = DB.questions.filter(q => q.part === p).length;
+        const disabled = count === 0;
         return `
-        <div class="card card-hover ${disabled?'':''}\" onclick="${disabled?'':'startPractice('+p+')'}" style="${disabled?'opacity:.55;cursor:default':''}">
+        <div class="card card-hover ${disabled?'':''}" onclick="${disabled?'':'startPractice('+p+')'}" style="${disabled?'opacity:.55;cursor:default':''}">
           <div style="font-size:22px;margin-bottom:8px">${p===5?'📝':p===6?'📄':'📰'}</div>
           <div style="font-weight:700;font-size:15px">Part ${p}</div>
           <div style="font-size:12px;color:var(--tm);margin-top:2px">${p===5?'句子填空':p===6?'段落填空':'閱讀理解'}</div>
           <div style="margin-top:10px">
-            <span class="badge ${c.count>0?'':'gray'}">${c.count} 題</span>
+            <span class="badge ${count>0?'':'gray'}">${count} 題</span>
             ${disabled?'<span style="font-size:11px;color:var(--tm);margin-left:6px">尚未載入</span>':''}
           </div>
-        </div>`
+        </div>`;
       }).join('')}
     </div>
 
-    <!-- Quick actions -->
     <h2 style="font-size:16px;font-weight:700;margin-bottom:12px">快速操作</h2>
     <div class="grid2" style="margin-bottom:24px">
       <button class="card card-hover" style="text-align:left;border:none" onclick="showPage('practice')">
@@ -409,15 +517,15 @@ function renderHome() {
         <div style="font-weight:700">錯題重練</div>
         <div style="font-size:12px;color:var(--tm);margin-top:2px">${mistakeCount} 道待複習</div>
       </button>
+      <button class="card card-hover" style="text-align:left;border:none" onclick="showPage('aigen')">
+        <div style="font-size:20px;margin-bottom:6px">🤖</div>
+        <div style="font-weight:700">AI 仿真出題</div>
+        <div style="font-size:12px;color:var(--tm);margin-top:2px">Gemini 生成新題練習</div>
+      </button>
       <button class="card card-hover" style="text-align:left;border:none" onclick="showPage('vocab')">
         <div style="font-size:20px;margin-bottom:6px">🧠</div>
         <div style="font-weight:700">單字測驗</div>
         <div style="font-size:12px;color:var(--tm);margin-top:2px">${vocabCount} 個已記錄</div>
-      </button>
-      <button class="card card-hover" style="text-align:left;border:none" onclick="showPage('import')">
-        <div style="font-size:20px;margin-bottom:6px">📥</div>
-        <div style="font-weight:700">匯入題目</div>
-        <div style="font-size:12px;color:var(--tm);margin-top:2px">JSON 格式匯入</div>
       </button>
     </div>
 
@@ -432,8 +540,7 @@ function renderHome() {
 }
 
 function statCard(icon, label, val, unit) {
-  return `
-  <div class="card" style="text-align:center;padding:16px">
+  return `<div class="card" style="text-align:center;padding:16px">
     <div style="font-size:24px;margin-bottom:4px">${icon}</div>
     <div style="font-size:24px;font-weight:800;color:var(--p)">${val}</div>
     <div style="font-size:11px;color:var(--tm);font-weight:600">${label} ${unit}</div>
@@ -444,33 +551,28 @@ function statCard(icon, label, val, unit) {
 // BROWSE PAGE
 // ============================================================
 let browseFilters = { part: 0, book: 0 };
-
 function renderBrowse() {
   const el = document.getElementById('page-browse');
   const books = [...new Set(DB.questions.map(q => q.book))].sort((a,b)=>a-b);
-
   el.innerHTML = `
   <div class="container">
     <h1 style="font-size:22px;font-weight:800;margin-bottom:20px">題庫瀏覽</h1>
-
-    <!-- Filters -->
     <div class="card" style="margin-bottom:20px">
       <div style="margin-bottom:10px">
         <label>Part</label>
-        <div class="chip-group" id="browsePartChips">
+        <div class="chip-group">
           <div class="chip active" onclick="setBrowseFilter('part',0,this)">全部</div>
           ${[5,6,7].map(p=>`<div class="chip" onclick="setBrowseFilter('part',${p},this)">Part ${p}</div>`).join('')}
         </div>
       </div>
       <div>
         <label>回數</label>
-        <div class="chip-group" id="browseBookChips">
+        <div class="chip-group">
           <div class="chip active" onclick="setBrowseFilter('book',0,this)">全部</div>
           ${books.map(b=>`<div class="chip" onclick="setBrowseFilter('book',${b},this)">OG${b}</div>`).join('')}
         </div>
       </div>
     </div>
-
     <div id="browseList"></div>
   </div>`;
   renderBrowseList();
@@ -478,47 +580,35 @@ function renderBrowse() {
 
 function setBrowseFilter(key, val, el) {
   browseFilters[key] = val;
-  el.closest('.chip-group').querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.closest('.chip-group').querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
   el.classList.add('active');
   renderBrowseList();
 }
 
 function renderBrowseList() {
   let qs = DB.questions;
-  if (browseFilters.part) qs = qs.filter(q => q.part === browseFilters.part);
-  if (browseFilters.book) qs = qs.filter(q => q.book === browseFilters.book);
-
+  if (browseFilters.part) qs = qs.filter(q=>q.part===browseFilters.part);
+  if (browseFilters.book) qs = qs.filter(q=>q.book===browseFilters.book);
   const el = document.getElementById('browseList');
-  if (!qs.length) {
-    el.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><p>找不到符合條件的題目</p></div>`;
-    return;
-  }
-
-  // Group by part
+  if (!qs.length) { el.innerHTML=`<div class="empty-state"><div class="empty-icon">🔍</div><p>找不到符合條件的題目</p></div>`; return; }
   const byPart = {};
-  qs.forEach(q => {
-    if (!byPart[q.part]) byPart[q.part] = [];
-    byPart[q.part].push(q);
-  });
-
-  el.innerHTML = Object.entries(byPart).sort(([a],[b])=>a-b).map(([part, questions]) => `
+  qs.forEach(q=>{ if(!byPart[q.part]) byPart[q.part]=[]; byPart[q.part].push(q); });
+  el.innerHTML = Object.entries(byPart).sort(([a],[b])=>a-b).map(([part,questions])=>`
     <div style="margin-bottom:24px">
       <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:var(--tm)">Part ${part} · ${questions.length} 題</h2>
       <div style="display:flex;flex-direction:column;gap:8px">
-        ${questions.map(q => {
-          const hasMistake = !!DB.mistakes[q.id];
-          return `
-          <div class="card card-hover" onclick="previewQuestion('${q.id}')" style="padding:14px 16px">
+        ${questions.map(q=>{
+          const hasMistake=!!DB.mistakes[q.id];
+          const hasExp=!!q.explanation;
+          return `<div class="card card-hover" onclick="previewQuestion('${q.id}')" style="padding:14px 16px">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
               <span class="badge">OG${q.book}</span>
               <span class="badge ac">P${q.part}</span>
               <span style="font-size:12px;color:var(--tm)">Q${q.qNum}</span>
-              ${hasMistake ? `<span class="badge ng">錯題 ×${DB.mistakes[q.id].count}</span>` : ''}
-              ${q.tags?.map(t=>`<span style="font-size:11px;color:var(--tm);background:var(--bg);padding:1px 6px;border-radius:3px">${t}</span>`).join('')||''}
+              ${hasMistake?`<span class="badge ng">錯題 ×${DB.mistakes[q.id].count}</span>`:''}
+              ${hasExp?`<span class="badge ok">有詳解</span>`:''}
             </div>
-            <div style="margin-top:8px;font-size:14px;color:var(--tx);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">
-              ${q.stem}
-            </div>
+            <div style="margin-top:8px;font-size:14px;color:var(--tx);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${q.stem}</div>
           </div>`;
         }).join('')}
       </div>
@@ -531,56 +621,69 @@ function previewQuestion(id) {
   const hasMistake = !!DB.mistakes[id];
   showModal(`
     <div class="modal-title">題目預覽 · OG${q.book} P${q.part} Q${q.qNum}</div>
-    ${q.passage ? `<div style="background:var(--bg);padding:12px;border-radius:8px;font-size:13px;line-height:1.7;margin-bottom:14px;color:#444;max-height:200px;overflow-y:auto">${q.passage}</div>` : ''}
+    ${q.passage?`<div style="background:var(--bg);padding:12px;border-radius:8px;font-size:13px;line-height:1.7;margin-bottom:14px;color:#444;max-height:200px;overflow-y:auto">${q.passage}</div>`:''}
     <p style="font-size:15px;line-height:1.6;margin-bottom:14px">${q.stem}</p>
     <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
-      ${q.options.map((opt,i) => {
-        const letter = 'ABCD'[i];
-        const isAns = letter === q.answer;
+      ${q.options.map((opt,i)=>{
+        const letter='ABCD'[i];
+        const isAns=letter===q.answer;
         return `<div style="padding:8px 12px;border-radius:7px;font-size:14px;background:${isAns?'var(--okl)':'var(--bg)'};border:1px solid ${isAns?'var(--ok)':'var(--bd)'};color:${isAns?'var(--ok)':'var(--tx)'}">
           <strong>${letter})</strong> ${opt.replace(/^[A-D]\)\s*/,'')}
         </div>`;
       }).join('')}
     </div>
-    ${q.explanation ? `<div class="explanation ok"><strong>解析：</strong> ${q.explanation}</div>` : ''}
-    ${q.translation ? `<div class="trans-block">${q.translation}</div>` : ''}
+    ${q.explanation?`<div class="explanation ok"><strong>📖 解析：</strong>${q.explanation}</div>`:''}
+    ${q.translation?`<div class="trans-block">${q.translation}</div>`:''}
     <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
       <button class="btn sm primary" onclick="closeModal();startSingleQ('${id}')">練習此題</button>
-      ${hasMistake ? `<button class="btn sm danger" onclick="removeMistake('${id}');closeModal();renderBrowse()">移出錯題</button>` : ''}
+      ${!q.explanation?`<button class="btn sm accent" onclick="genSingleExplanation('${id}')">AI 生成詳解</button>`:''}
+      ${hasMistake?`<button class="btn sm danger" onclick="removeMistake('${id}');closeModal();renderBrowse()">移出錯題</button>`:''}
       <button class="btn sm" onclick="closeModal()">關閉</button>
     </div>
   `);
 }
 
-// ============================================================
-// PRACTICE SETUP PAGE
-// ============================================================
-let practiceConfig = { parts: [5], books: [], count: 20, timer: true, mistakeOnly: false };
+async function genSingleExplanation(id) {
+  const q = getQuestion(id);
+  if (!q) return;
+  if (!getGeminiKey()) { showToast('請先設定 Gemini API Key'); showPage('settings'); return; }
 
+  showModal(`<div class="modal-title">生成詳解中...</div><div style="text-align:center;padding:20px"><span class="spinner"></span></div>`);
+
+  try {
+    const result = await generateExplanation(q);
+    q.explanation = result.explanation || '';
+    q.translation = result.translation || '';
+    saveDB();
+    showToast('✅ 詳解已生成');
+    previewQuestion(id);
+  } catch(e) {
+    showModal(`<div class="modal-title">生成失敗</div><p style="color:var(--ng)">${e.message}</p><button class="btn" style="margin-top:16px" onclick="closeModal()">關閉</button>`);
+  }
+}
+
+// ============================================================
+// PRACTICE PAGE
+// ============================================================
+let practiceConfig = { parts:[5], books:[], count:20, timer:true, mistakeOnly:false };
 function renderPractice() {
   const el = document.getElementById('page-practice');
-  const books = [...new Set(DB.questions.map(q => q.book))].sort((a,b)=>a-b);
+  const books = [...new Set(DB.questions.map(q=>q.book))].sort((a,b)=>a-b);
   const total = DB.questions.length;
-
   el.innerHTML = `
   <div class="container narrow">
     <h1 style="font-size:22px;font-weight:800;margin-bottom:20px">自訂練習</h1>
-
     <div class="card" style="margin-bottom:16px">
       <div class="form-row">
         <label>Part（可多選）</label>
         <div class="chip-group">
-          ${[5,6,7].map(p=>`
-            <div class="chip ${practiceConfig.parts.includes(p)?'active':''}" onclick="togglePart(${p},this)">Part ${p}</div>
-          `).join('')}
+          ${[5,6,7].map(p=>`<div class="chip ${practiceConfig.parts.includes(p)?'active':''}" onclick="togglePart(${p},this)">Part ${p}</div>`).join('')}
         </div>
       </div>
       <div class="form-row">
         <label>回數（不選則全部）</label>
         <div class="chip-group" style="max-height:100px;overflow-y:auto">
-          ${books.map(b=>`
-            <div class="chip ${practiceConfig.books.includes(b)?'active':''}" onclick="toggleBook(${b},this)">OG${b}</div>
-          `).join('')}
+          ${books.map(b=>`<div class="chip ${practiceConfig.books.includes(b)?'active':''}" onclick="toggleBook(${b},this)">OG${b}</div>`).join('')}
           ${books.length===0?'<span style="font-size:13px;color:var(--tm)">尚未匯入任何回數</span>':''}
         </div>
       </div>
@@ -596,15 +699,9 @@ function renderPractice() {
         </div>
       </div>
     </div>
-
     <div id="practicePreview" style="margin-bottom:16px"></div>
-
-    <button class="btn primary lg" style="width:100%" onclick="startPracticeFromConfig()">
-      開始練習 →
-    </button>
-    <button class="btn" style="width:100%;margin-top:8px" onclick="startMistakeReview()">
-      錯題練習 (${Object.keys(DB.mistakes).length} 題)
-    </button>
+    <button class="btn primary lg" style="width:100%" onclick="startPracticeFromConfig()">開始練習 →</button>
+    <button class="btn" style="width:100%;margin-top:8px" onclick="startMistakeReview()">錯題練習 (${Object.keys(DB.mistakes).length} 題)</button>
   </div>`;
   updatePracticePreview();
 }
@@ -626,35 +723,30 @@ function toggleBook(b, el) {
 }
 
 function updatePracticePreview() {
-  let qs = DB.questions.filter(q => practiceConfig.parts.includes(q.part));
-  if (practiceConfig.books.length) qs = qs.filter(q => practiceConfig.books.includes(q.book));
-  const count = Math.min(qs.length, practiceConfig.count || qs.length);
+  let qs = DB.questions.filter(q=>practiceConfig.parts.includes(q.part));
+  if (practiceConfig.books.length) qs = qs.filter(q=>practiceConfig.books.includes(q.book));
+  const count = Math.min(qs.length, practiceConfig.count||qs.length);
   const el = document.getElementById('practicePreview');
-  if (el) el.innerHTML = `<div class="card" style="background:var(--pl);border-color:rgba(42,124,118,.2);padding:12px 16px;font-size:13px;color:var(--p);font-weight:600">
-    預計出題：${count} 道（題庫符合：${qs.length} 道）
-  </div>`;
+  if (el) el.innerHTML = `<div class="card" style="background:var(--pl);border-color:rgba(42,124,118,.2);padding:12px 16px;font-size:13px;color:var(--p);font-weight:600">預計出題：${count} 道（題庫符合：${qs.length} 道）</div>`;
 }
 
 function startPractice(part) {
-  practiceConfig.parts = [part];
-  practiceConfig.books = [];
-  practiceConfig.count = part === 5 ? 30 : 20;
+  practiceConfig.parts=[part]; practiceConfig.books=[]; practiceConfig.count=part===5?30:20;
   startPracticeFromConfig();
 }
 
 function startPracticeFromConfig() {
-  let qs = DB.questions.filter(q => practiceConfig.parts.includes(q.part));
-  if (practiceConfig.books.length) qs = qs.filter(q => practiceConfig.books.includes(q.book));
+  let qs = DB.questions.filter(q=>practiceConfig.parts.includes(q.part));
+  if (practiceConfig.books.length) qs = qs.filter(q=>practiceConfig.books.includes(q.book));
   if (!qs.length) { showToast('沒有符合條件的題目'); return; }
-  // Shuffle and limit
-  qs = shuffle(qs).slice(0, practiceConfig.count || qs.length);
+  qs = shuffle(qs).slice(0, practiceConfig.count||qs.length);
   startQuiz(qs, practiceConfig.timer);
 }
 
 function startMistakeReview() {
   const mistakeIds = Object.keys(DB.mistakes);
   if (!mistakeIds.length) { showToast('目前沒有錯題'); return; }
-  const qs = mistakeIds.map(id => getQuestion(id)).filter(Boolean);
+  const qs = mistakeIds.map(id=>getQuestion(id)).filter(Boolean);
   startQuiz(shuffle(qs), practiceConfig.timer);
 }
 
@@ -666,41 +758,16 @@ function startSingleQ(id) {
 // ============================================================
 // QUIZ ENGINE
 // ============================================================
-let quizState = {
-  questions: [],
-  current: 0,
-  answers: {},   // { qid: 'A'|null }
-  startTime: null,
-  timerInterval: null,
-  elapsed: 0,
-  useTimer: true
-};
+let quizState = { questions:[], current:0, answers:{}, startTime:null, timerInterval:null, elapsed:0, useTimer:true };
 
-function startQuiz(questions, useTimer = true) {
-  quizState = {
-    questions,
-    current: 0,
-    answers: {},
-    startTime: Date.now(),
-    timerInterval: null,
-    elapsed: 0,
-    useTimer
-  };
-  questions.forEach(q => quizState.answers[q.id] = null);
-
-  // Navigate to quiz page (no nav tab)
-  document.querySelectorAll('[id^="page-"]').forEach(el => el.style.display = 'none');
-  document.getElementById('page-quiz').style.display = 'block';
-  document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+function startQuiz(questions, useTimer=true) {
+  quizState = { questions, current:0, answers:{}, startTime:Date.now(), timerInterval:null, elapsed:0, useTimer };
+  questions.forEach(q=>quizState.answers[q.id]=null);
+  document.querySelectorAll('[id^="page-"]').forEach(el=>el.style.display='none');
+  document.getElementById('page-quiz').style.display='block';
+  document.querySelectorAll('.nav-tab').forEach(el=>el.classList.remove('active'));
   window.scrollTo(0,0);
-
-  if (useTimer) {
-    quizState.timerInterval = setInterval(() => {
-      quizState.elapsed++;
-      updateTimer();
-    }, 1000);
-  }
-
+  if (useTimer) quizState.timerInterval = setInterval(()=>{ quizState.elapsed++; updateTimer(); }, 1000);
   renderQuizQuestion();
 }
 
@@ -709,46 +776,32 @@ function renderQuizQuestion() {
   const total = quizState.questions.length;
   const current = quizState.current;
   const answered = quizState.answers[q.id];
-  const progress = ((current + (answered?1:0)) / total) * 100;
-
+  const progress = ((current+(answered?1:0))/total)*100;
   const el = document.getElementById('page-quiz');
+  const isPassage = q.part>=6 && q.passage;
 
-  // Determine if this is a P6/P7 group question
-  const isPassage = q.part >= 6 && q.passage;
-  const groupQs = q.groupId ? quizState.questions.filter(x => x.groupId === q.groupId) : [];
-
-  const questionHTML = `
-    <!-- Progress -->
+  el.innerHTML = `
     <div style="max-width:780px;margin:0 auto;padding:0 20px">
       <div class="progress-bar" style="margin-top:16px;margin-bottom:0">
         <div class="progress-fill" style="width:${progress}%"></div>
       </div>
     </div>
-
-    <div class="${isPassage ? 'wide' : 'container narrow'} fade-in">
-      <!-- Header -->
+    <div class="${isPassage?'wide':'container narrow'} fade-in">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
         <div style="display:flex;align-items:center;gap:8px">
           <button class="btn sm" onclick="confirmExitQuiz()">← 離開</button>
           <span style="font-size:13px;color:var(--tm);font-weight:600">${current+1} / ${total}</span>
           <span class="badge">OG${q.book} P${q.part}</span>
+          ${q.isAI?'<span class="badge ac">AI題</span>':''}
         </div>
         <div id="timerDisplay" class="timer" style="${quizState.useTimer?'':'display:none'}">0:00</div>
       </div>
-
-      ${isPassage ? renderPassageLayout(q, groupQs, answered) : renderSingleQuestion(q, answered)}
-
-      <!-- Navigation -->
+      ${isPassage ? renderPassageLayout(q,[],answered) : renderSingleQuestion(q, answered)}
       <div style="display:flex;gap:8px;margin-top:20px;flex-wrap:wrap">
-        ${current > 0 ? `<button class="btn" onclick="quizNav(-1)">← 上一題</button>` : ''}
-        ${answered !== null ? `
-          ${current < total-1 ? `<button class="btn primary" onclick="quizNav(1)">下一題 →</button>` : `<button class="btn primary" onclick="finishQuiz()">完成練習 ✓</button>`}
-        ` : ''}
-        ${current === total-1 && answered !== null ? '' : ''}
+        ${current>0?`<button class="btn" onclick="quizNav(-1)">← 上一題</button>`:''}
+        ${answered!==null ? (current<total-1 ? `<button class="btn primary" onclick="quizNav(1)">下一題 →</button>` : `<button class="btn primary" onclick="finishQuiz()">完成練習 ✓</button>`) : ''}
       </div>
     </div>`;
-
-  el.innerHTML = questionHTML;
   makeClickableWords();
   updateTimer();
 }
@@ -758,128 +811,135 @@ function renderSingleQuestion(q, answered) {
     <div class="card">
       <p class="passage-text" id="qStem" style="margin-bottom:20px;font-size:16px;line-height:1.7">${q.stem}</p>
       <div style="display:flex;flex-direction:column;gap:8px">
-        ${q.options.map((opt, i) => {
-          const letter = 'ABCD'[i];
-          let cls = '';
-          if (answered !== null) {
-            cls = 'locked';
-            if (letter === q.answer) cls += ' correct';
-            else if (letter === answered) cls += ' wrong';
-          } else if (answered === letter) cls = 'selected';
+        ${q.options.map((opt,i)=>{
+          const letter='ABCD'[i];
+          let cls='';
+          if(answered!==null){cls='locked';if(letter===q.answer)cls+=' correct';else if(letter===answered)cls+=' wrong';}
+          else if(answered===letter)cls='selected';
           return `<button class="option-btn ${cls}" onclick="selectAnswer('${q.id}','${letter}')">
             <span class="option-circle ${answered!==null?(letter===q.answer?'ok':letter===answered?'ng':''):(answered===letter?'sel':'')}">${letter}</span>
             <span>${opt.replace(/^[A-D]\)\s*/,'')}</span>
           </button>`;
         }).join('')}
       </div>
-      ${answered !== null ? renderExplanation(q, answered) : ''}
+      ${answered!==null ? renderExplanation(q, answered) : ''}
     </div>`;
 }
 
 function renderPassageLayout(q, groupQs, answered) {
-  // Find the passage from the group (first q that has it)
-  const passageQ = groupQs.find(x => x.passage) || q;
   return `
     <div class="split-layout">
       <div class="split-left">
         <div class="card">
-          ${passageQ.passageTitle ? `<div style="font-weight:700;font-size:14px;color:var(--p);margin-bottom:10px">${passageQ.passageTitle}</div>` : ''}
-          <div class="passage-text" id="passageText">${passageQ.passage}</div>
+          ${q.passageTitle?`<div style="font-weight:700;font-size:14px;color:var(--p);margin-bottom:10px">${q.passageTitle}</div>`:''}
+          <div class="passage-text" id="passageText">${q.passage}</div>
         </div>
       </div>
-      <div>
-        ${renderSingleQuestion(q, answered)}
-        ${groupQs.length > 1 ? `
-        <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
-          ${groupQs.map((gq, i) => {
-            const isCur = gq.id === q.id;
-            const isAns = quizState.answers[gq.id] !== null;
-            return `<button class="chip ${isCur?'active':''}" onclick="jumpToGroupQ('${gq.id}')">${i+1}${isAns?'✓':''}</button>`;
-          }).join('')}
-        </div>` : ''}
-      </div>
+      <div>${renderSingleQuestion(q, answered)}</div>
     </div>`;
 }
 
 function renderExplanation(q, chosen) {
   const correct = chosen === q.answer;
+  const hasExp = !!q.explanation;
+  const hasKey = !!getGeminiKey();
   return `
     <div class="explanation ${correct?'ok':'ng'}">
       <div style="font-weight:700;margin-bottom:4px">${correct?'✅ 正確！':'❌ 答錯了'} 正確答案：${q.answer}</div>
-      ${q.explanation ? `<p style="font-size:14px;line-height:1.6;margin-top:6px">${q.explanation}</p>` : ''}
+      ${hasExp ? `
+        <div style="margin-top:10px">
+          <div style="font-size:13px;font-weight:600;color:var(--tm);margin-bottom:4px">📖 解析</div>
+          <p style="font-size:14px;line-height:1.7">${q.explanation}</p>
+        </div>` : (hasKey ? `
+        <div style="margin-top:10px">
+          <button class="btn sm accent" onclick="genExplanationInQuiz('${q.id}')">✨ AI 生成詳解</button>
+        </div>` : '')}
     </div>
-    ${q.translation ? `<div class="trans-block">${q.translation}</div>` : ''}`;
+    ${q.translation?`<div class="trans-block">${q.translation}</div>`:''}`;
+}
+
+async function genExplanationInQuiz(qid) {
+  const q = getQuestion(qid);
+  if (!q) return;
+  const btn = event.target;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> 生成中...';
+  try {
+    const result = await generateExplanation(q);
+    q.explanation = result.explanation || '';
+    q.translation = result.translation || '';
+    saveDB();
+    renderQuizQuestion();
+  } catch(e) {
+    showToast('生成失敗：' + e.message);
+    btn.disabled = false;
+    btn.innerHTML = '✨ AI 生成詳解';
+  }
+}
+
+async function generateExplanation(q) {
+  const optText = q.options.map((o,i)=>`${String.fromCharCode(65+i)}) ${o.replace(/^[A-D]\)\s*/,'')}`).join('  ');
+  const prompt = `你是TOEIC英文教師，請為以下Part 5題目提供詳細解析。
+
+題目：${q.stem}
+選項：${optText}
+正確答案：${q.answer}
+
+請輸出純JSON（不要markdown符號）：
+{"explanation":"【文法解析】說明正確答案的原因，以及其他三個選項為何錯誤，用繁體中文，約100-150字","translation":"題目的完整繁體中文翻譯"}`;
+
+  return await callGeminiJSON(prompt);
 }
 
 function selectAnswer(qid, letter) {
-  if (quizState.answers[qid] !== null) return;
-  quizState.answers[qid] = letter;
+  if (quizState.answers[qid]!==null) return;
+  quizState.answers[qid]=letter;
   const q = getQuestion(qid);
-  if (q && letter !== q.answer) recordMistake(qid);
+  if (q && letter!==q.answer) recordMistake(qid);
   renderQuizQuestion();
 }
 
 function quizNav(dir) {
-  quizState.current = Math.max(0, Math.min(quizState.questions.length - 1, quizState.current + dir));
+  quizState.current = Math.max(0, Math.min(quizState.questions.length-1, quizState.current+dir));
   window.scrollTo(0,0);
   renderQuizQuestion();
 }
 
-function jumpToGroupQ(qid) {
-  const idx = quizState.questions.findIndex(q => q.id === qid);
-  if (idx > -1) { quizState.current = idx; window.scrollTo(0,0); renderQuizQuestion(); }
-}
-
 function updateTimer() {
   const el = document.getElementById('timerDisplay');
-  if (!el || !quizState.useTimer) return;
-  const s = quizState.elapsed;
-  const m = Math.floor(s/60);
-  const ss = String(s%60).padStart(2,'0');
-  el.textContent = `${m}:${ss}`;
-  el.className = 'timer' + (s > 1800 ? ' danger' : s > 900 ? ' warn' : '');
+  if (!el||!quizState.useTimer) return;
+  const s=quizState.elapsed, m=Math.floor(s/60), ss=String(s%60).padStart(2,'0');
+  el.textContent=`${m}:${ss}`;
+  el.className='timer'+(s>1800?' danger':s>900?' warn':'');
 }
 
 function finishQuiz() {
   clearInterval(quizState.timerInterval);
-  const qs = quizState.questions;
-  const total = qs.length;
-  const correct = qs.filter(q => quizState.answers[q.id] === q.answer).length;
-  const acc = Math.round(correct/total*100);
-
-  // Save history
-  DB.history.push({
-    date: new Date().toISOString(),
-    part: [...new Set(qs.map(q=>q.part))],
-    total, correct,
-    elapsed: quizState.elapsed,
-    qids: qs.map(q=>q.id)
-  });
+  const qs=quizState.questions;
+  const total=qs.length;
+  const correct=qs.filter(q=>quizState.answers[q.id]===q.answer).length;
+  const acc=Math.round(correct/total*100);
+  DB.history.push({ date:new Date().toISOString(), part:[...new Set(qs.map(q=>q.part))], total, correct, elapsed:quizState.elapsed, qids:qs.map(q=>q.id) });
   saveDB();
-
-  // Show results
-  const el = document.getElementById('page-quiz');
-  const partBreakdown = [5,6,7].map(p => {
-    const pqs = qs.filter(q=>q.part===p);
-    if (!pqs.length) return '';
-    const pc = pqs.filter(q=>quizState.answers[q.id]===q.answer).length;
+  const el=document.getElementById('page-quiz');
+  const partBreakdown=[5,6,7].map(p=>{
+    const pqs=qs.filter(q=>q.part===p);
+    if(!pqs.length) return '';
+    const pc=pqs.filter(q=>quizState.answers[q.id]===q.answer).length;
     return `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--bd)">
       <span style="font-size:14px">Part ${p}</span>
       <span style="font-weight:600">${pc}/${pqs.length} (${Math.round(pc/pqs.length*100)}%)</span>
     </div>`;
   }).join('');
-
   el.innerHTML = `
     <div class="container narrow fade-in">
       <div class="card" style="text-align:center;padding:40px 24px;margin-bottom:20px">
         <div style="font-size:56px;margin-bottom:16px">${acc>=80?'🎉':acc>=60?'💪':'📖'}</div>
         <div style="font-size:48px;font-weight:800;color:var(--p)">${acc}%</div>
         <div style="font-size:16px;color:var(--tm);margin-top:4px">答對 ${correct} / ${total} 題</div>
-        ${quizState.useTimer ? `<div style="margin-top:8px;font-size:13px;color:var(--tm)">⏱ ${Math.floor(quizState.elapsed/60)}分${quizState.elapsed%60}秒</div>` : ''}
+        ${quizState.useTimer?`<div style="margin-top:8px;font-size:13px;color:var(--tm)">⏱ ${Math.floor(quizState.elapsed/60)}分${quizState.elapsed%60}秒</div>`:''}
       </div>
-
-      ${partBreakdown ? `<div class="card" style="margin-bottom:20px"><div style="font-weight:700;margin-bottom:4px">各 Part 成績</div>${partBreakdown}</div>` : ''}
-
+      ${partBreakdown?`<div class="card" style="margin-bottom:20px"><div style="font-weight:700;margin-bottom:4px">各 Part 成績</div>${partBreakdown}</div>`:''}
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn primary" onclick="reviewWrongAnswers()">檢討錯題</button>
         <button class="btn" onclick="showPage('practice')">再練一次</button>
@@ -889,41 +949,34 @@ function finishQuiz() {
 }
 
 function reviewWrongAnswers() {
-  const qs = quizState.questions;
-  const wrongQs = qs.filter(q => quizState.answers[q.id] !== null && quizState.answers[q.id] !== q.answer);
-  if (!wrongQs.length) { showToast('全部答對了！'); return; }
-
-  const el = document.getElementById('page-quiz');
-  el.innerHTML = `
+  const qs=quizState.questions;
+  const wrongQs=qs.filter(q=>quizState.answers[q.id]!==null&&quizState.answers[q.id]!==q.answer);
+  if(!wrongQs.length){showToast('全部答對了！');return;}
+  const el=document.getElementById('page-quiz');
+  el.innerHTML=`
     <div class="container narrow">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
         <button class="btn sm" onclick="showPage('home')">← 首頁</button>
         <h2 style="font-size:18px;font-weight:700">錯題檢討（${wrongQs.length} 題）</h2>
       </div>
-      ${wrongQs.map(q => `
+      ${wrongQs.map(q=>`
         <div class="card fade-in" style="margin-bottom:16px">
           <div style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap">
-            <span class="badge">OG${q.book}</span>
-            <span class="badge ac">P${q.part}</span>
-            <span class="badge ng">答錯</span>
+            <span class="badge">OG${q.book}</span><span class="badge ac">P${q.part}</span><span class="badge ng">答錯</span>
           </div>
           <p style="font-size:15px;line-height:1.7;margin-bottom:12px">${q.stem}</p>
           <div style="display:flex;flex-direction:column;gap:6px">
-            ${q.options.map((opt,i) => {
-              const letter = 'ABCD'[i];
-              const isAns = letter === q.answer;
-              const wasChosen = letter === quizState.answers[q.id];
-              return `<div style="padding:8px 12px;border-radius:7px;font-size:14px;
-                background:${isAns?'var(--okl)':wasChosen?'var(--ngl)':'var(--bg)'};
-                border:1px solid ${isAns?'var(--ok)':wasChosen?'var(--ng)':'var(--bd)'};
-                color:${isAns?'var(--ok)':wasChosen?'var(--ng)':'var(--tm)'}">
-                <strong>${letter})</strong> ${opt.replace(/^[A-D]\)\s*/,'')}
-                ${isAns?' ✓':''}${wasChosen?' ✗':''}
+            ${q.options.map((opt,i)=>{
+              const letter='ABCD'[i];
+              const isAns=letter===q.answer;
+              const wasChosen=letter===quizState.answers[q.id];
+              return `<div style="padding:8px 12px;border-radius:7px;font-size:14px;background:${isAns?'var(--okl)':wasChosen?'var(--ngl)':'var(--bg)'};border:1px solid ${isAns?'var(--ok)':wasChosen?'var(--ng)':'var(--bd)'};color:${isAns?'var(--ok)':wasChosen?'var(--ng)':'var(--tm)'}">
+                <strong>${letter})</strong> ${opt.replace(/^[A-D]\)\s*/,'')}${isAns?' ✓':''}${wasChosen?' ✗':''}
               </div>`;
             }).join('')}
           </div>
-          ${q.explanation ? `<div class="explanation ok" style="margin-top:10px"><strong>解析：</strong>${q.explanation}</div>` : ''}
-          ${q.translation ? `<div class="trans-block">${q.translation}</div>` : ''}
+          ${q.explanation?`<div class="explanation ok" style="margin-top:10px"><strong>📖 解析：</strong>${q.explanation}</div>`:''}
+          ${q.translation?`<div class="trans-block">${q.translation}</div>`:''}
         </div>
       `).join('')}
       <button class="btn primary" onclick="showPage('home')">回首頁</button>
@@ -932,14 +985,8 @@ function reviewWrongAnswers() {
 }
 
 function confirmExitQuiz() {
-  showModal(`
-    <div class="modal-title">確定離開？</div>
-    <p style="color:var(--tm);font-size:14px;margin-bottom:20px">目前進度將不會儲存</p>
-    <div style="display:flex;gap:8px">
-      <button class="btn danger" onclick="exitQuiz()">確定離開</button>
-      <button class="btn" onclick="closeModal()">繼續作答</button>
-    </div>
-  `);
+  showModal(`<div class="modal-title">確定離開？</div><p style="color:var(--tm);font-size:14px;margin-bottom:20px">目前進度將不會儲存</p>
+    <div style="display:flex;gap:8px"><button class="btn danger" onclick="exitQuiz()">確定離開</button><button class="btn" onclick="closeModal()">繼續作答</button></div>`);
 }
 
 function exitQuiz() {
@@ -952,18 +999,12 @@ function exitQuiz() {
 // MISTAKES PAGE
 // ============================================================
 function renderMistakes() {
-  const el = document.getElementById('page-mistakes');
-  const mistakeIds = Object.keys(DB.mistakes);
-  const qs = mistakeIds.map(id => getQuestion(id)).filter(Boolean);
-
-  if (!qs.length) {
-    el.innerHTML = `<div class="container"><div class="empty-state"><div class="empty-icon">🎉</div><h2>沒有錯題！</h2><p>繼續保持！</p></div></div>`;
-    return;
-  }
-
-  qs.sort((a,b) => (DB.mistakes[b.id]?.count||0) - (DB.mistakes[a.id]?.count||0));
-
-  el.innerHTML = `
+  const el=document.getElementById('page-mistakes');
+  const mistakeIds=Object.keys(DB.mistakes);
+  const qs=mistakeIds.map(id=>getQuestion(id)).filter(Boolean);
+  if(!qs.length){el.innerHTML=`<div class="container"><div class="empty-state"><div class="empty-icon">🎉</div><h2>沒有錯題！</h2><p>繼續保持！</p></div></div>`;return;}
+  qs.sort((a,b)=>(DB.mistakes[b.id]?.count||0)-(DB.mistakes[a.id]?.count||0));
+  el.innerHTML=`
   <div class="container">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
       <h1 style="font-size:22px;font-weight:800">錯題本 (${qs.length})</h1>
@@ -973,12 +1014,11 @@ function renderMistakes() {
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px">
-      ${qs.map(q => `
+      ${qs.map(q=>`
         <div class="card" style="padding:14px 16px">
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
             <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-              <span class="badge">OG${q.book}</span>
-              <span class="badge ac">P${q.part}</span>
+              <span class="badge">OG${q.book}</span><span class="badge ac">P${q.part}</span>
               <span class="badge ng">錯 ${DB.mistakes[q.id]?.count||1} 次</span>
             </div>
             <div style="display:flex;gap:6px">
@@ -987,85 +1027,64 @@ function renderMistakes() {
             </div>
           </div>
           <p style="margin-top:8px;font-size:14px;color:var(--tx);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${q.stem}</p>
-        </div>
-      `).join('')}
+        </div>`).join('')}
     </div>
   </div>`;
 }
 
 function clearAllMistakes() {
-  showModal(`
-    <div class="modal-title">清空錯題本？</div>
-    <p style="color:var(--tm);font-size:14px;margin-bottom:20px">此操作無法復原</p>
-    <div style="display:flex;gap:8px">
-      <button class="btn danger" onclick="DB.mistakes={};saveDB();closeModal();renderMistakes()">確定清空</button>
-      <button class="btn" onclick="closeModal()">取消</button>
-    </div>
-  `);
+  showModal(`<div class="modal-title">清空錯題本？</div><p style="color:var(--tm);font-size:14px;margin-bottom:20px">此操作無法復原</p>
+    <div style="display:flex;gap:8px"><button class="btn danger" onclick="DB.mistakes={};saveDB();closeModal();renderMistakes()">確定清空</button><button class="btn" onclick="closeModal()">取消</button></div>`);
 }
 
 // ============================================================
 // VOCAB PAGE
 // ============================================================
-let vocabQuizState = { words: [], current: 0, correct: 0, total: 0, flipped: false };
-
+let vocabQuizState={words:[],current:0,correct:0,total:0,flipped:false};
 function renderVocab() {
-  const el = document.getElementById('page-vocab');
-  const words = Object.entries(DB.vocabSeen);
-
-  if (!words.length) {
-    el.innerHTML = `<div class="container"><div class="empty-state"><div class="empty-icon">📝</div><h2>還沒有單字</h2><p>練習題目時點擊單字即可加入單字本</p></div></div>`;
-    return;
-  }
-
-  el.innerHTML = `
+  const el=document.getElementById('page-vocab');
+  const words=Object.entries(DB.vocabSeen);
+  if(!words.length){el.innerHTML=`<div class="container"><div class="empty-state"><div class="empty-icon">📝</div><h2>還沒有單字</h2><p>練習題目時點擊單字即可加入單字本</p></div></div>`;return;}
+  el.innerHTML=`
   <div class="container">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
       <h1 style="font-size:22px;font-weight:800">單字本 (${words.length})</h1>
       <button class="btn primary" onclick="startVocabQuiz()">開始測驗</button>
     </div>
     <div style="display:flex;flex-direction:column;gap:8px">
-      ${words.sort(([,a],[,b])=>b.seenCount-a.seenCount).map(([word, data]) => `
+      ${words.sort(([,a],[,b])=>b.seenCount-a.seenCount).map(([word,data])=>`
         <div class="card" style="padding:12px 16px">
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div>
               <span style="font-weight:700;font-size:15px;color:var(--p)">${word}</span>
-              ${data.pos ? `<span style="font-size:11px;color:var(--tm);font-style:italic;margin-left:6px">${data.pos}</span>` : ''}
-              ${data.def ? `<div style="font-size:13px;color:var(--tm);margin-top:2px">${data.def}</div>` : ''}
-              ${data.ex ? `<div style="font-size:12px;color:#aaa;margin-top:2px;font-style:italic">${data.ex}</div>` : ''}
+              ${data.pos?`<span style="font-size:11px;color:var(--tm);font-style:italic;margin-left:6px">${data.pos}</span>`:''}
+              ${data.def?`<div style="font-size:13px;color:var(--tm);margin-top:2px">${data.def}</div>`:''}
             </div>
             <div style="display:flex;gap:6px;align-items:center">
               <span style="font-size:11px;color:var(--tm)">×${data.seenCount}</span>
               <button class="btn sm" onclick="removeVocab('${word}')">✕</button>
             </div>
           </div>
-        </div>
-      `).join('')}
+        </div>`).join('')}
     </div>
   </div>`;
 }
 
-function removeVocab(word) {
-  delete DB.vocabSeen[word];
-  saveDB();
-  renderVocab();
-}
+function removeVocab(word){delete DB.vocabSeen[word];saveDB();renderVocab();}
 
 function startVocabQuiz() {
-  const words = Object.entries(DB.vocabSeen).filter(([,d]) => d.def);
-  if (words.length < 2) { showToast('需要至少 2 個有定義的單字才能測驗'); return; }
-  const shuffled = shuffle(words);
-  vocabQuizState = { words: shuffled, current: 0, correct: 0, total: shuffled.length, flipped: false };
+  const words=Object.entries(DB.vocabSeen).filter(([,d])=>d.def);
+  if(words.length<2){showToast('需要至少 2 個有定義的單字才能測驗');return;}
+  const shuffled=shuffle(words);
+  vocabQuizState={words:shuffled,current:0,correct:0,total:shuffled.length,flipped:false};
   renderVocabQuiz();
 }
 
 function renderVocabQuiz() {
-  const el = document.getElementById('page-vocab');
-  const { words, current, correct, total } = vocabQuizState;
-
-  if (current >= total) {
-    el.innerHTML = `
-    <div class="container narrow" style="text-align:center;padding-top:40px">
+  const el=document.getElementById('page-vocab');
+  const{words,current,correct,total}=vocabQuizState;
+  if(current>=total){
+    el.innerHTML=`<div class="container narrow" style="text-align:center;padding-top:40px">
       <div class="card" style="padding:40px">
         <div style="font-size:48px;margin-bottom:12px">${correct/total>=0.8?'🌟':'💪'}</div>
         <div style="font-size:40px;font-weight:800;color:var(--p)">${Math.round(correct/total*100)}%</div>
@@ -1078,214 +1097,369 @@ function renderVocabQuiz() {
     </div>`;
     return;
   }
-
-  const [word, data] = words[current];
-  const progress = (current / total) * 100;
-
-  el.innerHTML = `
+  const[word,data]=words[current];
+  const progress=(current/total)*100;
+  el.innerHTML=`
   <div class="container narrow">
     <div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
       <button class="btn sm" onclick="renderVocab()">← 退出</button>
       <span style="font-size:13px;color:var(--tm)">${current+1} / ${total} · 答對 ${correct}</span>
     </div>
-
     <div class="vocab-card" style="margin-bottom:24px;cursor:pointer" onclick="flipVocabCard()">
       <div class="vocab-inner ${vocabQuizState.flipped?'flipped':''}">
         <div class="vocab-front" style="min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:28px;font-weight:800;color:var(--p);margin-bottom:8px">${word}</div>
-          ${data.pos ? `<div style="font-size:13px;color:var(--tm);font-style:italic">${data.pos}</div>` : ''}
+          ${data.pos?`<div style="font-size:13px;color:var(--tm);font-style:italic">${data.pos}</div>`:''}
           <div style="font-size:13px;color:var(--tm);margin-top:16px">點擊翻轉看答案</div>
         </div>
         <div class="vocab-back" style="min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px">
           <div style="font-size:20px;font-weight:700;color:var(--p);margin-bottom:8px">${data.def}</div>
-          ${data.ex ? `<div style="font-size:13px;color:var(--tm);text-align:center;font-style:italic">${data.ex}</div>` : ''}
+          ${data.ex?`<div style="font-size:13px;color:var(--tm);text-align:center;font-style:italic">${data.ex}</div>`:''}
         </div>
       </div>
     </div>
-
-    ${vocabQuizState.flipped ? `
+    ${vocabQuizState.flipped?`
     <div style="display:flex;gap:10px;justify-content:center">
       <button class="btn danger lg" onclick="vocabAnswer(false)">✗ 不會</button>
       <button class="btn primary lg" onclick="vocabAnswer(true)" style="background:var(--ok);border-color:var(--ok)">✓ 會了</button>
-    </div>` : `
-    <div style="text-align:center;color:var(--tm);font-size:14px">點擊卡片查看中文意思</div>`}
+    </div>`:`<div style="text-align:center;color:var(--tm);font-size:14px">點擊卡片查看中文意思</div>`}
   </div>`;
 }
 
-function flipVocabCard() {
-  vocabQuizState.flipped = !vocabQuizState.flipped;
-  renderVocabQuiz();
-}
-
-function vocabAnswer(isCorrect) {
-  if (isCorrect) vocabQuizState.correct++;
-  vocabQuizState.current++;
-  vocabQuizState.flipped = false;
-  renderVocabQuiz();
-}
+function flipVocabCard(){vocabQuizState.flipped=!vocabQuizState.flipped;renderVocabQuiz();}
+function vocabAnswer(isCorrect){if(isCorrect)vocabQuizState.correct++;vocabQuizState.current++;vocabQuizState.flipped=false;renderVocabQuiz();}
 
 // ============================================================
 // STATS PAGE
 // ============================================================
 function renderStats() {
-  const el = document.getElementById('page-stats');
-  const history = DB.history;
-
-  if (!history.length) {
-    el.innerHTML = `<div class="container"><div class="empty-state"><div class="empty-icon">📊</div><h2>還沒有練習記錄</h2><p>開始練習後會在這裡看到統計</p></div></div>`;
-    return;
-  }
-
-  const recent = history.slice(-20);
-  const totalCorrect = recent.reduce((s,h)=>s+h.correct,0);
-  const totalQ = recent.reduce((s,h)=>s+h.total,0);
-  const avgAcc = Math.round(totalCorrect/totalQ*100);
-
-  // By part
-  const byPart = {};
-  [5,6,7].forEach(p => {
-    const ph = history.filter(h => h.part.includes(p));
-    if (!ph.length) return;
-    const c = ph.reduce((s,h)=>s+h.correct,0);
-    const t = ph.reduce((s,h)=>s+h.total,0);
-    byPart[p] = { correct:c, total:t, acc: Math.round(c/t*100) };
+  const el=document.getElementById('page-stats');
+  const history=DB.history;
+  if(!history.length){el.innerHTML=`<div class="container"><div class="empty-state"><div class="empty-icon">📊</div><h2>還沒有練習記錄</h2></div></div>`;return;}
+  const recent=history.slice(-20);
+  const totalCorrect=recent.reduce((s,h)=>s+h.correct,0);
+  const totalQ=recent.reduce((s,h)=>s+h.total,0);
+  const avgAcc=Math.round(totalCorrect/totalQ*100);
+  const byPart={};
+  [5,6,7].forEach(p=>{
+    const ph=history.filter(h=>h.part.includes(p));
+    if(!ph.length)return;
+    const c=ph.reduce((s,h)=>s+h.correct,0),t=ph.reduce((s,h)=>s+h.total,0);
+    byPart[p]={correct:c,total:t,acc:Math.round(c/t*100)};
   });
-
-  // Trend (last 10)
-  const trend = history.slice(-10).map(h => Math.round(h.correct/h.total*100));
-
-  el.innerHTML = `
+  const trend=history.slice(-10).map(h=>Math.round(h.correct/h.total*100));
+  el.innerHTML=`
   <div class="container">
     <h1 style="font-size:22px;font-weight:800;margin-bottom:20px">學習統計</h1>
-
     <div class="grid4" style="margin-bottom:20px">
       ${statCard('📊','總練習',DB.history.length,'次')}
       ${statCard('✅','近期正確率',avgAcc+'%','')}
       ${statCard('❌','錯題庫',Object.keys(DB.mistakes).length,'題')}
       ${statCard('📝','單字',Object.keys(DB.vocabSeen).length,'個')}
     </div>
-
-    <!-- Part breakdown -->
     <div class="card" style="margin-bottom:20px">
       <div style="font-weight:700;margin-bottom:16px">各 Part 表現</div>
-      ${Object.entries(byPart).map(([p, data]) => `
+      ${Object.entries(byPart).map(([p,data])=>`
         <div style="margin-bottom:14px">
           <div style="display:flex;justify-content:space-between;margin-bottom:6px">
             <span style="font-size:14px;font-weight:600">Part ${p}</span>
-            <span style="font-size:14px;color:${data.acc>=80?'var(--ok)':data.acc>=60?'var(--ac)':'var(--ng)'}">
-              ${data.acc}% (${data.correct}/${data.total})
-            </span>
+            <span style="font-size:14px;color:${data.acc>=80?'var(--ok)':data.acc>=60?'var(--ac)':'var(--ng)'}">${data.acc}% (${data.correct}/${data.total})</span>
           </div>
-          <div class="stat-bar">
-            <div class="stat-fill" style="width:${data.acc}%;background:${data.acc>=80?'var(--ok)':data.acc>=60?'var(--ac)':'var(--ng)'}"></div>
-          </div>
-        </div>
-      `).join('')}
+          <div class="stat-bar"><div class="stat-fill" style="width:${data.acc}%;background:${data.acc>=80?'var(--ok)':data.acc>=60?'var(--ac)':'var(--ng)'}"></div></div>
+        </div>`).join('')}
     </div>
-
-    <!-- Recent trend -->
     <div class="card" style="margin-bottom:20px">
       <div style="font-weight:700;margin-bottom:12px">近 ${trend.length} 次正確率趨勢</div>
       <div style="display:flex;align-items:flex-end;gap:6px;height:80px">
-        ${trend.map((acc,i) => `
+        ${trend.map(acc=>`
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px">
-            <div style="width:100%;background:${acc>=80?'var(--ok)':acc>=60?'var(--ac)':'var(--ng)'};border-radius:3px 3px 0 0;height:${acc*0.8}%;min-height:4px;transition:height .5s"></div>
+            <div style="width:100%;background:${acc>=80?'var(--ok)':acc>=60?'var(--ac)':'var(--ng)'};border-radius:3px 3px 0 0;height:${acc*0.8}%;min-height:4px"></div>
             <div style="font-size:10px;color:var(--tm)">${acc}%</div>
-          </div>
-        `).join('')}
+          </div>`).join('')}
       </div>
     </div>
-
-    <!-- History list -->
     <div class="card">
       <div style="font-weight:700;margin-bottom:12px">練習記錄（最近 20 次）</div>
       <div style="display:flex;flex-direction:column;gap:6px">
-        ${recent.reverse().map((h,i) => {
-          const acc = Math.round(h.correct/h.total*100);
-          const d = new Date(h.date);
-          const dateStr = `${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;
+        ${recent.reverse().map(h=>{
+          const acc=Math.round(h.correct/h.total*100);
+          const d=new Date(h.date);
           return `<div style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bd);font-size:13px">
-            <span style="color:var(--tm)">${dateStr}</span>
+            <span style="color:var(--tm)">${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}</span>
             <span>Part ${h.part.join(',')}</span>
             <span style="font-weight:600;color:${acc>=80?'var(--ok)':acc>=60?'var(--ac)':'var(--ng)'}">${acc}% (${h.correct}/${h.total})</span>
           </div>`;
         }).join('')}
       </div>
     </div>
-
     <button class="btn danger sm" style="margin-top:16px" onclick="clearHistory()">清除練習記錄</button>
   </div>`;
 }
 
-function clearHistory() {
-  showModal(`
-    <div class="modal-title">清除所有練習記錄？</div>
-    <p style="color:var(--tm);font-size:14px;margin-bottom:20px">此操作無法復原</p>
-    <div style="display:flex;gap:8px">
-      <button class="btn danger" onclick="DB.history=[];saveDB();closeModal();renderStats()">確定清除</button>
-      <button class="btn" onclick="closeModal()">取消</button>
-    </div>
-  `);
+function clearHistory(){
+  showModal(`<div class="modal-title">清除所有練習記錄？</div><p style="color:var(--tm);font-size:14px;margin-bottom:20px">此操作無法復原</p>
+    <div style="display:flex;gap:8px"><button class="btn danger" onclick="DB.history=[];saveDB();closeModal();renderStats()">確定清除</button><button class="btn" onclick="closeModal()">取消</button></div>`);
 }
 
 // ============================================================
-// IMPORT/EXPORT PAGE
+// AI GENERATE PAGE
+// ============================================================
+let aiGenConfig = { topic: 'mixed', difficulty: 2, count: 10 };
+const grammarTopics = [
+  { key:'mixed', label:'綜合混合' },
+  { key:'pos', label:'詞性辨別' },
+  { key:'tense', label:'時態' },
+  { key:'pronoun', label:'代名詞' },
+  { key:'preposition', label:'介系詞' },
+  { key:'conjunction', label:'連接詞' },
+  { key:'voice', label:'主被動語態' },
+  { key:'vocab', label:'商業字彙' },
+  { key:'comparison', label:'比較級/最高級' },
+];
+
+function renderAIGen() {
+  const el = document.getElementById('page-aigen');
+  const hasKey = !!getGeminiKey();
+  const aiQuestions = DB.questions.filter(q => q.isAI);
+
+  el.innerHTML = `
+  <div class="container narrow">
+    <h1 style="font-size:22px;font-weight:800;margin-bottom:4px">🤖 AI 仿真出題</h1>
+    <p style="font-size:13px;color:var(--tm);margin-bottom:20px">基於 OG 題庫風格，Gemini 生成仿真練習題</p>
+
+    ${!hasKey ? `
+    <div class="card" style="margin-bottom:16px;background:var(--acl);border-color:rgba(196,135,59,.3);cursor:pointer" onclick="showPage('settings')">
+      <div style="font-weight:700;color:var(--ac)">⚠️ 需要先設定 Gemini API Key</div>
+      <div style="font-size:13px;color:var(--tm);margin-top:4px">點此前往設定 →</div>
+    </div>` : ''}
+
+    <div class="generate-card" style="margin-bottom:16px">
+      <div class="form-row">
+        <label>文法考點</label>
+        <div class="chip-group">
+          ${grammarTopics.map(t=>`<div class="chip ${aiGenConfig.topic===t.key?'active':''}" onclick="aiGenConfig.topic='${t.key}';this.closest('.chip-group').querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));this.classList.add('active')">${t.label}</div>`).join('')}
+        </div>
+      </div>
+      <div class="form-row">
+        <label>難度</label>
+        <div class="chip-group">
+          ${[1,2,3,4,5].map(d=>`<div class="chip ${aiGenConfig.difficulty===d?'active':''}" onclick="aiGenConfig.difficulty=${d};this.closest('.chip-group').querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));this.classList.add('active')">${'⭐'.repeat(d)}</div>`).join('')}
+        </div>
+      </div>
+      <div class="form-row">
+        <label>生成題數</label>
+        <div class="chip-group">
+          ${[5,10,15,20].map(n=>`<div class="chip ${aiGenConfig.count===n?'active':''}" onclick="aiGenConfig.count=${n};this.closest('.chip-group').querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));this.classList.add('active')">${n} 題</div>`).join('')}
+        </div>
+      </div>
+      <button class="btn primary lg" style="width:100%" onclick="startAIGen()" ${!hasKey?'disabled':''}>
+        ✨ 生成題目
+      </button>
+    </div>
+
+    <div id="aiGenResult"></div>
+
+    ${aiQuestions.length > 0 ? `
+    <div class="card" style="margin-top:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-weight:700">已儲存的 AI 題目（${aiQuestions.length} 題）</div>
+        <button class="btn primary sm" onclick="startAIQuiz()">練習</button>
+      </div>
+      <div style="font-size:13px;color:var(--tm)">可在「練習」頁面混合 OG 題目一起練習</div>
+    </div>` : ''}
+  </div>`;
+}
+
+async function startAIGen() {
+  if (!getGeminiKey()) { showToast('請先設定 Gemini API Key'); return; }
+
+  const resultEl = document.getElementById('aiGenResult');
+  resultEl.innerHTML = `
+    <div class="card" style="text-align:center;padding:30px">
+      <span class="spinner"></span>
+      <div style="margin-top:12px;color:var(--tm);font-size:14px">Gemini 生成中，請稍候...</div>
+      <div style="font-size:12px;color:var(--tm);margin-top:4px">約需 10~20 秒</div>
+    </div>`;
+
+  const topicLabel = grammarTopics.find(t => t.key === aiGenConfig.topic)?.label || '綜合';
+
+  // Get 3 OG examples for few-shot
+  const examples = shuffle(DB.questions.filter(q => q.part === 5 && !q.isAI)).slice(0, 3);
+  const examplesText = examples.map((q, i) => {
+    const opts = q.options.map((o,j) => `${String.fromCharCode(65+j)}) ${o.replace(/^[A-D]\)\s*/,'')}`).join(' / ');
+    return `範例${i+1}：${q.stem}\n選項：${opts}\n答案：${q.answer}`;
+  }).join('\n\n');
+
+  const diffDesc = ['','初級（基礎文法）','初中級（常見考點）','中級（標準TOEIC）','中高級（較難）','高級（挑戰題）'][aiGenConfig.difficulty];
+
+  const prompt = `你是TOEIC Part 5出題專家。請根據以下真實OG題目的風格，生成${aiGenConfig.count}道仿真練習題。
+
+考點：${topicLabel}
+難度：${diffDesc}
+
+真實OG題目風格參考：
+${examplesText}
+
+要求：
+1. 題目必須是完整英文句子，挖空用______表示
+2. 四個選項設計要有迷惑性，錯誤選項要像是可能正確的
+3. 商業情境（辦公室、會議、客戶、報告等）
+4. 只有唯一正確答案
+
+請輸出純JSON陣列（不要markdown）：
+[
+  {
+    "stem": "完整題目句子（含______）",
+    "options": ["A) 選項A", "B) 選項B", "C) 選項C", "D) 選項D"],
+    "answer": "正確答案字母(A/B/C/D)",
+    "explanation": "繁體中文解析（說明為何選此答案，其他選項為何錯）",
+    "translation": "題目中文翻譯"
+  }
+]`;
+
+  try {
+    const result = await callGeminiJSON(prompt);
+    if (!Array.isArray(result) || !result.length) throw new Error('生成結果格式錯誤');
+
+    // Convert to app format and save
+    const newQs = result.map((q, i) => ({
+      id: genId(),
+      book: 0,
+      part: 5,
+      qNum: i + 1,
+      stem: q.stem || '',
+      options: q.options || [],
+      answer: q.answer || 'A',
+      explanation: q.explanation || '',
+      translation: q.translation || '',
+      tags: [topicLabel],
+      groupId: null,
+      passage: null,
+      isAI: true,
+      addedAt: new Date().toISOString().slice(0,10)
+    }));
+
+    // Show preview
+    resultEl.innerHTML = `
+      <div class="card" style="margin-bottom:12px;background:var(--okl);border-color:rgba(46,139,87,.2)">
+        <div style="font-weight:700;color:var(--ok);margin-bottom:4px">✅ 生成完成！${newQs.length} 道題目</div>
+        <div style="font-size:13px;color:var(--tm)">預覽前3題，確認後可加入題庫練習</div>
+      </div>
+      ${newQs.slice(0,3).map((q,i)=>`
+        <div class="card fade-in" style="margin-bottom:10px">
+          <div style="display:flex;gap:6px;margin-bottom:8px">
+            <span class="badge ac">AI題</span>
+            <span style="font-size:11px;color:var(--tm)">${topicLabel}</span>
+          </div>
+          <p style="font-size:14px;line-height:1.6;margin-bottom:10px">${q.stem}</p>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            ${q.options.map((opt,j)=>{
+              const letter='ABCD'[j];
+              const isAns=letter===q.answer;
+              return `<div style="padding:6px 10px;border-radius:6px;font-size:13px;background:${isAns?'var(--okl)':'var(--bg)'};border:1px solid ${isAns?'var(--ok)':'var(--bd)'};color:${isAns?'var(--ok)':'var(--tx)'}">
+                ${opt}${isAns?' ✓':''}
+              </div>`;
+            }).join('')}
+          </div>
+          ${q.explanation?`<div style="margin-top:8px;font-size:12px;color:var(--tm);padding:8px;background:var(--pl);border-radius:6px">${q.explanation}</div>`:''}
+        </div>`).join('')}
+      ${newQs.length > 3 ? `<div style="font-size:13px;color:var(--tm);text-align:center;padding:8px">...還有 ${newQs.length-3} 題</div>` : ''}
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn primary" onclick="saveAIQuestions(${JSON.stringify(newQs).replace(/"/g,'&quot;')})">💾 加入題庫（${newQs.length} 題）</button>
+        <button class="btn accent" onclick="startAIQuizFromNew(${JSON.stringify(newQs).replace(/"/g,'&quot;')})">▶ 直接練習</button>
+        <button class="btn" onclick="startAIGen()">🔄 重新生成</button>
+      </div>`;
+
+  } catch(e) {
+    resultEl.innerHTML = `
+      <div class="card" style="background:var(--ngl);border-color:rgba(201,70,61,.2)">
+        <div style="font-weight:700;color:var(--ng)">❌ 生成失敗</div>
+        <div style="font-size:13px;color:var(--tm);margin-top:4px">${e.message}</div>
+        <button class="btn sm" style="margin-top:10px" onclick="startAIGen()">重試</button>
+      </div>`;
+  }
+}
+
+function saveAIQuestions(questions) {
+  let added = 0;
+  questions.forEach(q => {
+    if (!DB.questions.find(x => x.id === q.id)) {
+      DB.questions.push(q);
+      added++;
+    }
+  });
+  saveDB();
+  showToast(`✅ 已加入 ${added} 題到題庫`);
+  renderAIGen();
+}
+
+function startAIQuizFromNew(questions) {
+  startQuiz(questions, practiceConfig.timer);
+}
+
+function startAIQuiz() {
+  const aiQs = shuffle(DB.questions.filter(q => q.isAI));
+  if (!aiQs.length) { showToast('沒有 AI 題目'); return; }
+  startQuiz(aiQs, practiceConfig.timer);
+}
+
+// ============================================================
+// IMPORT PAGE (with batch explanation)
 // ============================================================
 function renderImport() {
   const el = document.getElementById('page-import');
+  const total = DB.questions.length;
+  const withExp = DB.questions.filter(q => q.explanation).length;
+  const withoutExp = total - withExp;
+  const hasKey = !!getGeminiKey();
+
   el.innerHTML = `
   <div class="container">
     <h1 style="font-size:22px;font-weight:800;margin-bottom:20px">題目管理</h1>
+
+    <!-- Batch explanation -->
+    ${total > 0 ? `
+    <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg,var(--pl),#fdf8f0);border-color:rgba(42,124,118,.2)">
+      <div style="font-weight:700;font-size:16px;margin-bottom:4px;display:flex;align-items:center;gap:8px">
+        ✨ 批次生成詳解
+        <span class="badge ${withExp>0?'ok':'gray'}">${withExp}/${total} 已有詳解</span>
+      </div>
+      <div style="font-size:13px;color:var(--tm);margin-bottom:14px">
+        一鍵為所有 ${withoutExp} 道缺少詳解的題目生成 AI 解析與中文翻譯
+      </div>
+      ${!hasKey ? `
+      <div style="font-size:13px;color:var(--ac);margin-bottom:10px">⚠️ 請先在設定頁面設定 Gemini API Key</div>
+      <button class="btn" onclick="showPage('settings')">前往設定 →</button>` :
+      withoutExp === 0 ? `<div style="font-size:14px;color:var(--ok);font-weight:600">✅ 全部題目已有詳解！</div>` : `
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn primary" onclick="startBatchExplanation()">🚀 開始批次生成（${withoutExp} 題）</button>
+        <button class="btn" onclick="startBatchExplanation(true)">⏩ 只生成前 50 題（測試）</button>
+      </div>`}
+      <div id="batchProgress" style="margin-top:12px"></div>
+    </div>` : ''}
 
     <!-- Import -->
     <div class="card" style="margin-bottom:16px">
       <div style="font-weight:700;font-size:16px;margin-bottom:4px">匯入題目</div>
       <div style="font-size:13px;color:var(--tm);margin-bottom:16px">支援 JSON 格式，可單題或陣列批次匯入</div>
-
       <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
         <div style="font-size:32px;margin-bottom:8px">📂</div>
         <div style="font-weight:600;margin-bottom:4px">點擊選擇 JSON 檔案</div>
         <div style="font-size:13px;color:var(--tm)">或拖曳檔案到此區域</div>
         <input type="file" id="fileInput" accept=".json" style="display:none" onchange="handleFileImport(event)">
       </div>
-
       <div class="divider"></div>
-
       <div style="font-weight:600;margin-bottom:8px;font-size:14px">或貼上 JSON 文字</div>
-      <textarea id="jsonInput" rows="8" placeholder='貼上 JSON 題目資料...'></textarea>
+      <textarea id="jsonInput" rows="8" placeholder="貼上 JSON 題目資料..."></textarea>
       <button class="btn primary" style="margin-top:10px;width:100%" onclick="importFromText()">匯入</button>
-    </div>
-
-    <!-- Schema Reference -->
-    <div class="card" style="margin-bottom:16px">
-      <div style="font-weight:700;margin-bottom:8px">📋 JSON 格式說明</div>
-      <pre style="font-size:12px;background:var(--bg);padding:14px;border-radius:8px;overflow-x:auto;line-height:1.7;color:#555">${escapeHtml(JSON.stringify({
-  id: "og1_p5_001",
-  book: 1,
-  part: 5,
-  qNum: 101,
-  stem: "The manager ------- the report before the meeting.",
-  options: ["A) review", "B) reviewed", "C) reviews", "D) reviewing"],
-  answer: "B",
-  explanation: "主詞 manager 為第三人稱單數，動詞需用過去式 reviewed。",
-  translation: "經理在會議前審閱了報告。",
-  tags: ["文法", "時態"],
-  groupId: null,
-  passage: null
-}, null, 2))}</pre>
-      <div style="font-size:12px;color:var(--tm);margin-top:8px">
-        <strong>Part 6/7 注意：</strong>同一篇文章的題目需有相同的 <code>groupId</code>，
-        第一題填入 <code>passage</code> 文章內容，其餘題目 passage 設 null。
-        <strong>若 Part 6/7 題目缺少 groupId 和 passage，將被視為 Part 5 出題。</strong>
-      </div>
     </div>
 
     <!-- Export -->
     <div class="card" style="margin-bottom:16px">
       <div style="font-weight:700;margin-bottom:12px">匯出題庫</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button class="btn primary" onclick="exportAll()">匯出全部 (${DB.questions.length} 題)</button>
+        <button class="btn primary" onclick="exportAll()">匯出全部 (${total} 題)</button>
         <button class="btn" onclick="exportMistakes()">匯出錯題 (${Object.keys(DB.mistakes).length} 題)</button>
       </div>
     </div>
@@ -1300,271 +1474,198 @@ function renderImport() {
     </div>
   </div>`;
 
-  // Drag and drop
   const dz = document.getElementById('dropZone');
-  dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag-over'); });
-  dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
-  dz.addEventListener('drop', e => {
-    e.preventDefault();
-    dz.classList.remove('drag-over');
-    const file = e.dataTransfer.files[0];
-    if (file) readJsonFile(file);
-  });
+  if (dz) {
+    dz.addEventListener('dragover', e=>{e.preventDefault();dz.classList.add('drag-over');});
+    dz.addEventListener('dragleave', ()=>dz.classList.remove('drag-over'));
+    dz.addEventListener('drop', e=>{e.preventDefault();dz.classList.remove('drag-over');const f=e.dataTransfer.files[0];if(f)readJsonFile(f);});
+  }
 }
 
-function handleFileImport(e) {
-  const file = e.target.files[0];
-  if (file) readJsonFile(file);
+let batchRunning = false;
+async function startBatchExplanation(testOnly = false) {
+  if (!getGeminiKey()) { showToast('請先設定 Gemini API Key'); return; }
+  if (batchRunning) { showToast('批次處理進行中'); return; }
+
+  const targets = DB.questions.filter(q => !q.explanation && q.part === 5);
+  const batch = testOnly ? targets.slice(0, 50) : targets;
+
+  if (!batch.length) { showToast('沒有需要生成詳解的題目'); return; }
+
+  batchRunning = true;
+  let done = 0, failed = 0;
+  const total = batch.length;
+
+  function updateProgress() {
+    const pct = Math.round((done + failed) / total * 100);
+    const progressEl = document.getElementById('batchProgress');
+    if (!progressEl) return;
+    progressEl.innerHTML = `
+      <div class="batch-progress">
+        <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px">
+          <span>進度：${done + failed} / ${total}</span>
+          <span style="color:var(--p)">${pct}%</span>
+        </div>
+        <div class="batch-bar"><div class="batch-fill" style="width:${pct}%"></div></div>
+        <div style="font-size:12px;color:var(--tm);margin-top:4px">
+          ✅ 成功 ${done} 題　❌ 失敗 ${failed} 題　⏳ 剩餘 ${total - done - failed} 題
+        </div>
+        ${done + failed < total ? `<button class="btn danger sm" style="margin-top:8px" onclick="batchRunning=false;showToast('已停止')">停止</button>` : ''}
+      </div>`;
+  }
+
+  updateProgress();
+
+  // Process in batches of 5 to avoid rate limits
+  for (let i = 0; i < batch.length; i += 5) {
+    if (!batchRunning) break;
+    const chunk = batch.slice(i, i + 5);
+
+    await Promise.all(chunk.map(async q => {
+      if (!batchRunning) return;
+      try {
+        const result = await generateExplanation(q);
+        q.explanation = result.explanation || '';
+        q.translation = result.translation || '';
+        done++;
+      } catch(e) {
+        failed++;
+      }
+    }));
+
+    saveDB();
+    updateProgress();
+
+    // Rate limit: wait 1 second between batches
+    if (i + 5 < batch.length && batchRunning) {
+      await new Promise(r => setTimeout(r, 1000));
+    }
+  }
+
+  batchRunning = false;
+  saveDB();
+
+  const progressEl = document.getElementById('batchProgress');
+  if (progressEl) {
+    progressEl.innerHTML = `
+      <div class="batch-progress" style="background:var(--okl);border-color:rgba(46,139,87,.2)">
+        <div style="font-weight:700;color:var(--ok)">✅ 批次完成！</div>
+        <div style="font-size:13px;color:var(--tm);margin-top:4px">成功 ${done} 題，失敗 ${failed} 題</div>
+        <button class="btn primary sm" style="margin-top:8px" onclick="exportAll()">匯出備份</button>
+      </div>`;
+  }
+  showToast(`批次完成：${done} 題詳解已生成`);
 }
 
-function readJsonFile(file) {
-  const reader = new FileReader();
-  reader.onload = ev => processImportData(ev.target.result);
-  reader.readAsText(file);
-}
-
-function importFromText() {
-  const text = document.getElementById('jsonInput').value.trim();
-  if (!text) { showToast('請貼上 JSON 資料'); return; }
-  processImportData(text);
-}
+function handleFileImport(e){const f=e.target.files[0];if(f)readJsonFile(f);}
+function readJsonFile(file){const r=new FileReader();r.onload=ev=>processImportData(ev.target.result);r.readAsText(file);}
+function importFromText(){const t=document.getElementById('jsonInput').value.trim();if(!t){showToast('請貼上 JSON 資料');return;}processImportData(t);}
 
 function processImportData(text) {
   try {
     let data = JSON.parse(text);
     if (!Array.isArray(data)) data = [data];
-
-    let added = 0, skipped = 0, errors = [];
-
-    data.forEach((q, i) => {
-      // Validate required fields
-      if (!q.stem || !q.options || !q.answer || !q.part) {
-        errors.push(`第 ${i+1} 筆：缺少必要欄位 (stem/options/answer/part)`);
-        skipped++;
-        return;
-      }
-      if (!Array.isArray(q.options) || q.options.length < 2) {
-        errors.push(`第 ${i+1} 筆：options 需為至少 2 個選項的陣列`);
-        skipped++;
-        return;
-      }
-
-      // Generate id if missing
-      if (!q.id) q.id = genId();
-
-      // Check duplicate
-      if (DB.questions.find(x => x.id === q.id)) {
-        skipped++;
-        return;
-      }
-
-      // Defaults
-      q.book = q.book || 0;
-      q.qNum = q.qNum || 0;
-      q.addedAt = q.addedAt || new Date().toISOString().slice(0,10);
-
-      // P6/P7 validation warning
-      if ((q.part === 6 || q.part === 7) && !q.groupId && !q.passage) {
-        errors.push(`Q${q.qNum||i+1} (Part ${q.part})：沒有 groupId 和 passage，將被視為單題處理`);
-      }
-
-      DB.questions.push(q);
-      added++;
+    // Handle master JSON format {total, questions:[]}
+    if (data.length === 1 && data[0].questions) data = data[0].questions;
+    let added=0,skipped=0,errors=[];
+    data.forEach((q,i)=>{
+      if(!q.stem||!q.options||!q.answer||!q.part){errors.push(`第${i+1}筆：缺少必要欄位`);skipped++;return;}
+      if(!Array.isArray(q.options)||q.options.length<2){errors.push(`第${i+1}筆：options需為陣列`);skipped++;return;}
+      if(!q.id)q.id=genId();
+      if(DB.questions.find(x=>x.id===q.id)){skipped++;return;}
+      q.book=q.book||0;q.qNum=q.qNum||0;q.addedAt=q.addedAt||new Date().toISOString().slice(0,10);
+      DB.questions.push(q);added++;
     });
-
     saveDB();
-
-    const msg = `✅ 匯入成功 ${added} 題${skipped ? `，略過 ${skipped} 題` : ''}`;
-    if (errors.length) {
-      showModal(`
-        <div class="modal-title">匯入完成</div>
-        <p style="font-size:14px;margin-bottom:12px">${msg}</p>
-        <div style="font-size:13px;color:var(--tm);background:var(--bg);padding:12px;border-radius:8px;max-height:200px;overflow-y:auto">
-          ${errors.map(e=>`<div style="margin-bottom:4px">⚠️ ${e}</div>`).join('')}
-        </div>
-        <button class="btn primary" style="margin-top:16px;width:100%" onclick="closeModal();renderImport()">確定</button>
-      `);
-    } else {
-      showToast(msg);
-      renderImport();
-    }
-  } catch(e) {
-    showToast('❌ JSON 格式錯誤：' + e.message);
-  }
+    const msg=`✅ 匯入成功 ${added} 題${skipped?`，略過 ${skipped} 題`:''}`;
+    if(errors.length){
+      showModal(`<div class="modal-title">匯入完成</div><p style="font-size:14px;margin-bottom:12px">${msg}</p>
+        <div style="font-size:13px;color:var(--tm);background:var(--bg);padding:12px;border-radius:8px;max-height:200px;overflow-y:auto">${errors.map(e=>`<div>⚠️ ${e}</div>`).join('')}</div>
+        <button class="btn primary" style="margin-top:16px;width:100%" onclick="closeModal();renderImport()">確定</button>`);
+    } else { showToast(msg); renderImport(); }
+  } catch(e) { showToast('❌ JSON 格式錯誤：'+e.message); }
 }
 
-function exportAll() {
-  downloadJSON(DB.questions, 'toeic_og_all.json');
+function exportAll(){downloadJSON(DB.questions,'toeic_og_all.json');}
+function exportMistakes(){const ids=Object.keys(DB.mistakes);downloadJSON(ids.map(id=>getQuestion(id)).filter(Boolean),'toeic_og_mistakes.json');}
+function downloadJSON(data,filename){
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download=filename;a.click();
+  URL.revokeObjectURL(url);showToast('✅ 已下載 '+filename);
 }
-
-function exportMistakes() {
-  const ids = Object.keys(DB.mistakes);
-  const qs = ids.map(id => getQuestion(id)).filter(Boolean);
-  downloadJSON(qs, 'toeic_og_mistakes.json');
+function clearAllQuestions(){
+  showModal(`<div class="modal-title">清空所有題目？</div><p style="color:var(--tm);font-size:14px;margin-bottom:20px">將刪除 ${DB.questions.length} 道題目，此操作無法復原</p>
+    <div style="display:flex;gap:8px"><button class="btn danger" onclick="DB.questions=[];DB.mistakes={};saveDB();closeModal();renderImport()">確定清空</button><button class="btn" onclick="closeModal()">取消</button></div>`);
 }
-
-function downloadJSON(data, filename) {
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url; a.download = filename; a.click();
-  URL.revokeObjectURL(url);
-  showToast('✅ 已下載 ' + filename);
-}
-
-function clearAllQuestions() {
-  showModal(`
-    <div class="modal-title">清空所有題目？</div>
-    <p style="color:var(--tm);font-size:14px;margin-bottom:20px">將刪除 ${DB.questions.length} 道題目，此操作無法復原</p>
-    <div style="display:flex;gap:8px">
-      <button class="btn danger" onclick="DB.questions=[];DB.mistakes={};saveDB();closeModal();renderImport()">確定清空</button>
-      <button class="btn" onclick="closeModal()">取消</button>
-    </div>
-  `);
-}
-
-function clearAllData() {
-  showModal(`
-    <div class="modal-title">清空所有資料？</div>
-    <p style="color:var(--tm);font-size:14px;margin-bottom:20px">包含題目、錯題、練習記錄、單字本，此操作無法復原</p>
-    <div style="display:flex;gap:8px">
-      <button class="btn danger" onclick="localStorage.removeItem('${DB_KEY}');location.reload()">確定清空</button>
-      <button class="btn" onclick="closeModal()">取消</button>
-    </div>
-  `);
+function clearAllData(){
+  showModal(`<div class="modal-title">清空所有資料？</div><p style="color:var(--tm);font-size:14px;margin-bottom:20px">包含題目、錯題、練習記錄、單字本，此操作無法復原</p>
+    <div style="display:flex;gap:8px"><button class="btn danger" onclick="localStorage.removeItem('${DB_KEY}');location.reload()">確定清空</button><button class="btn" onclick="closeModal()">取消</button></div>`);
 }
 
 // ============================================================
-// WORD CLICK FEATURE
+// WORD CLICK FEATURE (Gemini)
 // ============================================================
 function makeClickableWords() {
-  // Make words in passage and stem clickable
-  ['passageText','qStem'].forEach(id => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.innerHTML = el.innerHTML.replace(/\b([a-zA-Z]{3,})\b/g, (m) =>
-      `<span class="cw" onclick="lookupWord('${m}')">${m}</span>`
-    );
+  ['passageText','qStem'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    el.innerHTML=el.innerHTML.replace(/\b([a-zA-Z]{3,})\b/g,m=>`<span class="cw" onclick="lookupWord('${m}',event)">${m}</span>`);
   });
 }
 
 let popupTimeout;
-function lookupWord(word) {
-  const popup = document.getElementById('wordPopup');
-  const known = DB.vocabSeen[word.toLowerCase()];
-
-  // Show loading state immediately
-  popup.style.display = 'block';
-  popup.innerHTML = `<div style="color:var(--tm);font-size:13px">查詢中...</div>`;
-  positionPopup(event);
-
-  // If we have cached data, show it
-  if (known && known.def) {
-    showWordPopup(word, known.def, known.pos, known.ex);
-    return;
-  }
-
-  // Call Claude API for word lookup
-  fetchWordDef(word).then(result => {
-    if (result) {
-      addVocab(word.toLowerCase(), result.def, result.pos, result.ex);
-      showWordPopup(word, result.def, result.pos, result.ex);
-    } else {
-      showWordPopup(word, '（查詢失敗）', '', '');
-    }
-  });
-}
-
-async function fetchWordDef(word) {
+async function lookupWord(word, e) {
+  const popup=document.getElementById('wordPopup');
+  const known=DB.vocabSeen[word.toLowerCase()];
+  popup.style.display='block';
+  popup.innerHTML=`<div style="color:var(--tm);font-size:13px">查詢中...</div>`;
+  positionPopup(e);
+  if(known&&known.def){showWordPopup(word,known.def,known.pos,known.ex);return;}
+  if(!getGeminiKey()){showWordPopup(word,'（請先設定 Gemini Key）','','');return;}
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 200,
-        system: 'You are a dictionary. Reply ONLY with JSON: {"def":"中文意思","pos":"詞性(n./v./adj.等)","ex":"English example sentence"}. No other text.',
-        messages: [{ role: 'user', content: `Define: ${word}` }]
-      })
-    });
-    const data = await res.json();
-    const text = data.content?.[0]?.text || '';
-    return JSON.parse(text.replace(/```json?|```/g,'').trim());
-  } catch(e) { return null; }
+    const prompt=`Define the English word "${word}". Reply ONLY with JSON (no markdown): {"def":"繁體中文意思","pos":"詞性(n./v./adj./adv.等)","ex":"English example sentence"}`;
+    const result=await callGeminiJSON(prompt);
+    addVocab(word.toLowerCase(),result.def,result.pos,result.ex);
+    showWordPopup(word,result.def,result.pos,result.ex);
+  } catch(err) {
+    showWordPopup(word,'（查詢失敗）','','');
+  }
 }
 
-function showWordPopup(word, def, pos, ex) {
-  const popup = document.getElementById('wordPopup');
-  popup.innerHTML = `
+function showWordPopup(word,def,pos,ex) {
+  const popup=document.getElementById('wordPopup');
+  popup.innerHTML=`
     <div class="word-head">${word}</div>
-    ${pos ? `<div class="word-pos">${pos}</div>` : ''}
+    ${pos?`<div class="word-pos">${pos}</div>`:''}
     <div class="word-def">${def}</div>
-    ${ex ? `<div class="word-ex">${ex}</div>` : ''}
-    <div style="margin-top:8px;font-size:11px;color:var(--tm)">✓ 已加入單字本</div>
-  `;
-
+    ${ex?`<div class="word-ex">${ex}</div>`:''}
+    <div style="margin-top:8px;font-size:11px;color:var(--tm)">✓ 已加入單字本</div>`;
   clearTimeout(popupTimeout);
-  popupTimeout = setTimeout(() => { popup.style.display = 'none'; }, 4000);
+  popupTimeout=setTimeout(()=>{popup.style.display='none';},4000);
 }
 
 function positionPopup(e) {
-  const popup = document.getElementById('wordPopup');
-  const vw = window.innerWidth, vh = window.innerHeight;
-  let x = (e?.clientX || vw/2) + 10;
-  let y = (e?.clientY || vh/2) + 10;
-  if (x + 280 > vw) x = vw - 290;
-  if (y + 150 > vh) y = y - 160;
-  popup.style.left = x + 'px';
-  popup.style.top = y + 'px';
+  const popup=document.getElementById('wordPopup');
+  const vw=window.innerWidth,vh=window.innerHeight;
+  let x=(e?.clientX||vw/2)+10,y=(e?.clientY||vh/2)+10;
+  if(x+280>vw)x=vw-290;
+  if(y+150>vh)y=y-160;
+  popup.style.left=x+'px';popup.style.top=y+'px';
 }
 
-document.addEventListener('click', (e) => {
-  const popup = document.getElementById('wordPopup');
-  if (!e.target.classList.contains('cw') && popup.style.display !== 'none') {
-    popup.style.display = 'none';
-  }
+document.addEventListener('click',e=>{
+  const popup=document.getElementById('wordPopup');
+  if(!e.target.classList.contains('cw')&&popup.style.display!=='none')popup.style.display='none';
 });
 
 // ============================================================
-// MODAL
+// MODAL & TOAST
 // ============================================================
-function showModal(html) {
-  document.getElementById('modalContent').innerHTML = html;
-  document.getElementById('modalOverlay').style.display = 'flex';
-}
-
-function closeModal(e) {
-  if (e && e.target !== document.getElementById('modalOverlay')) return;
-  document.getElementById('modalOverlay').style.display = 'none';
-}
-
-// ============================================================
-// TOAST
-// ============================================================
+function showModal(html){document.getElementById('modalContent').innerHTML=html;document.getElementById('modalOverlay').style.display='flex';}
+function closeModal(e){if(e&&e.target!==document.getElementById('modalOverlay'))return;document.getElementById('modalOverlay').style.display='none';}
 let toastTimeout;
-function showToast(msg) {
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.style.display = 'block';
-  clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => el.style.display = 'none', 2800);
-}
-
-// ============================================================
-// UTILS
-// ============================================================
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length-1; i>0; i--) {
-    const j = Math.floor(Math.random()*(i+1));
-    [a[i],a[j]] = [a[j],a[i]];
-  }
-  return a;
-}
-
-function escapeHtml(str) {
-  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
+function showToast(msg){const el=document.getElementById('toast');el.textContent=msg;el.style.display='block';clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.style.display='none',2800);}
 
 // ============================================================
 // INIT
